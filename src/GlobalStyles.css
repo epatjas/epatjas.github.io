@@ -1,0 +1,32 @@
+:root {
+  /* Color tokens */
+  --color-background: hsl(210, 11%, 4%);
+  --color-text: hsl(235, 62%, 96%);
+  --color-text-secondary: hsl(0, 0%, 60%);
+  --font-main: 'Inter', sans-serif;
+  --max-width: 1200px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
