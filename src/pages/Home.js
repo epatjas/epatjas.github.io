@@ -1,8 +1,18 @@
 import React from 'react';
-import Header from '../components/Header'; // Adjust the path if necessary
+import { Link } from 'react-router-dom';
+import Testimonials from '../components/Testimonials';
+import Header from '../components/Header';
+import Footer from '../components/Footer'; 
 import './Home.css';
 
 function Home() {
+  const highlightedProjects = [
+    { id: '01', name: 'Otava Learning', image: '/images/Nova.png' },
+    { id: '02', name: 'City of Helsinki', image: '/images/helsinki.png' },
+    { id: '03', name: 'Fira', image: '/images/Fira.png' },
+    { id: '04', name: 'Vaisala DCX', image: '/images/vaisala.png' },
+  ];
+
   return (
     <div className="home-page">
       <Header />
@@ -16,7 +26,7 @@ function Home() {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>I'm an experienced product designer working on various projects on a wide range of clients. My unique skillset has helped me to manage extremely complex products and deliver outstanding results.</p>
+              <p>I'm an experienced full-stack product designer working on various projects on a wide range of clients. My unique skillset has helped me to manage extremely complex products and deliver outstanding results.</p>
               <p>I view things holistically and am able to think of a system as a whole. I know how to take responsibility for design decisions and am able to articulate them clearly.</p>
             </div>
             <div className="skills">
@@ -34,37 +44,30 @@ function Home() {
           </div>
         </section>
 
-        <section className="projects">
+        <section className="highlighted-projects">
           <h2>Highlighted projects</h2>
           <div className="project-grid">
-            <div className="project-item">
-              <img src="/path-to-otava-image.jpg" alt="Otava Learning" />
-              <p>01 Otava Learning</p>
-            </div>
-            <div className="project-item">
-              <img src="/path-to-helsinki-image.jpg" alt="City of Helsinki" />
-              <p>02 City of Helsinki</p>
-            </div>
-            <div className="project-item">
-              <img src="/path-to-fira-image.jpg" alt="Fira" />
-              <p>03 Fira</p>
-            </div>
-            <div className="project-item">
-              <img src="/path-to-vaisala-image.jpg" alt="Vaisala DCX" />
-              <p>04 Vaisala DCX</p>
-            </div>
+            {highlightedProjects.map((project) => (
+              <div key={project.id} className="project-item">
+                <p className="project-title">{project.id} {project.name}</p>
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.name} />
+                </div>
+              </div>
+            ))}
           </div>
-          <a href="/work" className="see-all">See all ›</a>
+          <Link to="/work" className="see-all">See all ›</Link>
         </section>
 
-        <section className="testimonial">
-          <h2>What Clients Say</h2>
-          <blockquote>
-            "Elina has created the new visual and UX concept for city of Helsinki's main website and helped us to build our brand experience in the digital world. Elina has also been instrumental in creating our UX/UI design ways of working and training our UX/UI team and scaling our models across the organisation."
-          </blockquote>
-          <cite>Anni Leppänen<br />Lead Service Designer, City of Helsinki</cite>
-        </section>
+        <Testimonials 
+          title="What Clients Say"
+          quote="Your client quote here"
+          author="Client Name"
+          position="Client Position"
+        />
+
       </main>
+      <Footer />
     </div>
   );
 }

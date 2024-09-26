@@ -1,0 +1,42 @@
+.testimonial {
+  margin-top: 5rem;
+  max-width: var(--max-width); 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  text-align: left; /* Align the title to the left */
+}
+
+.testimonial h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-content {
+  text-align: center; /* Center the quote and author information */
+  max-width: 50rem; /* Limit the width of the quote for better readability */
+  margin: 0 auto; /* Center the content within the full-width container */
+}
+
+.testimonial blockquote {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial cite {
+  font-style: normal;
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
