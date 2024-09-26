@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
-import Header from '../components/Header';
-import Footer from '../components/Footer'; 
 import './Home.css';
 
 function Home() {
@@ -15,7 +13,6 @@ function Home() {
 
   return (
     <div className="home-page">
-      <Header />
       <main>
         <section className="hero">
           <h1>I'm a Principal Product Designer with 15+ years of experience in crafting high-quality designs, interactions, and products.</h1>
@@ -61,13 +58,12 @@ function Home() {
 
         <Testimonials 
           title="What Clients Say"
-          quote="Your client quote here"
-          author="Client Name"
-          position="Client Position"
+          quote="Elina has created the new visual and UX concept for city of Helsinki’s main website and helped us to build our brand experience in the digital world. Elina has also been instrumental in creating our UX/UI design ways of working and training our UX/UI team and scaling our models across the organisation."
+          author="Anni Leppänen"
+          position="City of Helsinki, Lead Service Designer"
         />
 
       </main>
-      <Footer />
     </div>
   );
 }

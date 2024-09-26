@@ -66,25 +66,29 @@ function About() {
       <Testimonials 
         title="What Colleagues Say"
         quote="Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she has a great eye for details. In a relatively short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organization!"
-        author="Teemu Haapala"
-        position="Head of AI Program"
+        author="Kristiina Ahola"
+        position="Senior Content Designer, Hel.fi program"
       />
 
-      <section className="clients">
+      <section className="clients-section">
         <h2>Clients</h2>
-        <p>I've had the pleasure of working with some great clients along the way. Here are some them:</p>
-        <ul>
-          <li>Otava Learning</li>
-          <li>City of Helsinki</li>
-          <li>Fira</li>
-          <li>Vaisala</li>
-          <li>Kotipizza</li>
-          <li>Hartwall</li>
-          <li>Kone</li>
-          <li>Froneri Finland</li>
-          <li>Metso</li>
-          <li>& many more</li>
-        </ul>
+        <div className="clients-content">
+          <p className="clients-intro">
+            I've had the pleasure of working with some great clients along the way. Here are some them.
+          </p>
+          <ul className="clients-list">
+            <li>Otava Learning</li>
+            <li>City of Helsinki</li>
+            <li>Fira</li>
+            <li>Vaisala</li>
+            <li>Kotipizza</li>
+            <li>Hartwall</li>
+            <li>Kone</li>
+            <li>Froneri Finland</li>
+            <li>Metso</li>
+            <li>& many more</li>
+          </ul>
+        </div>
       </section>
     </div>
   );

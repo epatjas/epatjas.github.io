@@ -1,19 +1,21 @@
 import React from 'react';
 import './Testimonials.css';
 
-function Testimonial({ title, quote, author, position }) {
+function Testimonials({ title, quote, author, role }) {
   return (
     <div className="testimonial">
       <h2>{title}</h2>
-      <blockquote>
-        "{quote}"
-      </blockquote>
-      <cite>
-        {author}<br />
-        {position}
-      </cite>
+      <div className="testimonial-content">
+        <blockquote>
+          "{quote}"
+        </blockquote>
+        <cite>
+          {author}<br />
+          {role}
+        </cite>
+      </div>
     </div>
   );
 }
 
-export default Testimonial;
+export default Testimonials;

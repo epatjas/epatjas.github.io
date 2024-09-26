@@ -1,15 +1,16 @@
 .testimonial {
-  margin-top: 5rem;
-  max-width: var(--max-width); 
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 5rem auto; /* Keep vertical margin, center horizontally */
+  box-sizing: border-box;
+  background-color: var(--color-background); /* Use your background color variable */
 }
 
 .testimonial h2 {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-  text-align: left; /* Align the title to the left */
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  text-align: left; /* Keep the title aligned to the left */
+  position: relative; /* For positioning the divider line */
 }
 
 .testimonial h2::after {
@@ -17,21 +18,23 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.5rem;
+  bottom: -1rem;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Create a wrapper for the blockquote and citation */
 .testimonial-content {
-  text-align: center; /* Center the quote and author information */
-  max-width: 50rem; /* Limit the width of the quote for better readability */
-  margin: 0 auto; /* Center the content within the full-width container */
+  padding-top: 2rem; /* Add padding to the top of the wrapper */
 }
 
+/* Target the blockquote directly */
 .testimonial blockquote {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 2rem; /* Remove top margin, keep bottom margin */
+  max-width: 60%;
+  text-align: center;
 }
 
 .testimonial cite {
@@ -39,4 +42,8 @@
   display: block;
   font-size: 1rem;
   color: var(--color-text-secondary);
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
