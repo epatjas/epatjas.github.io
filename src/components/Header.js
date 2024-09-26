@@ -1,19 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   return (
     <header className="header">
-      <Link to="/" className="logo-link">
-        <div className="logo">elina patjas</div>
-      </Link>
-      <nav>
-        {/* Your navigation items */}
-        <Link to="/about">About</Link>
-        <Link to="/work">Work</Link>
-        {/* Add any other navigation links */}
-      </nav>
+      <div className="header-content">
+        <NavLink to="/" className="logo">elina patjas</NavLink>
+        <nav>
+          <NavLink to="/work" activeClassName="active">Work</NavLink>
+          <NavLink to="/about" activeClassName="active">About</NavLink>
+        </nav>
+      </div>
     </header>
   );
 }

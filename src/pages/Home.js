@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import Testimonials from '../components/Testimonials';
+import ProjectCard from '../components/ProjectCard';
 import './Home.css';
 
 function Home() {
   const highlightedProjects = [
-    { id: '01', name: 'Otava Learning', image: '/images/Nova.png' },
-    { id: '02', name: 'City of Helsinki', image: '/images/helsinki.png' },
-    { id: '03', name: 'Fira', image: '/images/Fira.png' },
-    { id: '04', name: 'Vaisala DCX', image: '/images/vaisala.png' },
+    { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/nova-brand' },
+    { id: '02', image: '/images/helsinki.png', project: 'Online learning platform', client: 'Otava Learning', link: '/work/online-learning-platform' },
+    { id: '03', image: '/images/Fira.png', project: 'Nova AI', client: 'Otava Learning', link: '/work/nova-ai' },
   ];
 
   return (
     <div className="home-page">
+      <Header />
       <main>
         <section className="hero">
           <h1>I'm a Principal Product Designer with 15+ years of experience in crafting high-quality designs, interactions, and products.</h1>
@@ -45,12 +47,13 @@ function Home() {
           <h2>Highlighted projects</h2>
           <div className="project-grid">
             {highlightedProjects.map((project) => (
-              <div key={project.id} className="project-item">
-                <p className="project-title">{project.id} {project.name}</p>
-                <div className="project-image-container">
-                  <img src={project.image} alt={project.name} />
-                </div>
-              </div>
+              <ProjectCard
+                key={project.id}
+                image={project.image}
+                project={project.project}
+                client={project.client}
+                link={project.link}
+              />
             ))}
           </div>
           <Link to="/work" className="see-all">See all ›</Link>

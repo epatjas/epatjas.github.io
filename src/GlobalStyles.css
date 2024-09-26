@@ -4,7 +4,11 @@
   --color-text: hsl(235, 62%, 96%);
   --color-text-secondary: hsl(0, 0%, 60%);
   --font-main: 'Inter', sans-serif;
-  --max-width: 1200px;
+  --max-width: 1200px;  /* Added back the max-width variable */
+
+  /* New light theme colors */
+  --color-background-light: hsl(0, 0%, 100%);
+  --color-text-light: hsl(210, 11%, 4%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -32,4 +36,15 @@ a {
 a:hover {
   opacity: 0.7;
   text-decoration: none; /* Explicitly remove underline on hover */
+}
+
+/* New class for light background pages */
+.light-background {
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+/* Ensure links in light background are visible */
+.light-background a {
+  color: var(--color-text-light);
 }
