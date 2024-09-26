@@ -53,6 +53,7 @@ function Home() {
                 project={project.project}
                 client={project.client}
                 link={project.link}
+                isLight={false}
               />
             ))}
           </div>

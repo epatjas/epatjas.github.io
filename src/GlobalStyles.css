@@ -4,9 +4,9 @@
   --color-text: hsl(235, 62%, 96%);
   --color-text-secondary: hsl(0, 0%, 60%);
   --font-main: 'Inter', sans-serif;
-  --max-width: 1200px;  /* Added back the max-width variable */
+  --max-width: 1200px; 
 
-  /* New light theme colors */
+  /* Light theme colors */
   --color-background-light: hsl(0, 0%, 100%);
   --color-text-light: hsl(210, 11%, 4%);
 }

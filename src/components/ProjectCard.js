@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectCard.css';
 
-function ProjectCard({ image, project, client, link }) {
+function ProjectCard({ image, project, client, link, isLight = false }) {
+  const cardClass = isLight ? 'project-card project-card-light' : 'project-card project-card-dark';
+
   return (
-    <div className="project-card">
+    <div className={cardClass}>
       <Link to={link} className="project-card__image-link">
         <div className="project-card__image-container">
           <img src={image} alt={project} className="project-card__image" />

@@ -39,13 +39,13 @@ const projects = [
 
 function Work() {
   return (
-    <div className="work-page">
-      <Header />
+    <div className="workPage">
+      <Header isLight={true} />
       <main className="work-content">
         <h1 className="work-title">Selected Projects (20-24)</h1>
         <div className="project-grid">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard key={index} {...project} isLight={true} />
           ))}
         </div>
       </main>

@@ -1,15 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+function Header({ isLight = false }) {
+  const headerClass = isLight ? 'header header-light' : 'header header-dark';
+
   return (
-    <header className="header">
+    <header className={headerClass}>
       <div className="header-content">
-        <NavLink to="/" className="logo">elina patjas</NavLink>
+        <Link to="/" className="logo">elina patjas</Link>
         <nav>
           <NavLink to="/work" activeClassName="active">Work</NavLink>
           <NavLink to="/about" activeClassName="active">About</NavLink>
+          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
         </nav>
       </div>
     </header>
