@@ -4,11 +4,15 @@
   --color-text: hsl(235, 62%, 96%);
   --color-text-secondary: hsl(0, 0%, 60%);
   --font-main: 'Inter', sans-serif;
-  --max-width: 1200px; 
+  --max-width: 1400px; 
 
   /* Light theme colors */
   --color-background-light: hsl(0, 0%, 100%);
   --color-text-light: hsl(210, 11%, 4%);
+
+  /* Background variant */
+  --color-background-variant-rgb: hsl(210, 11%, 4%);
+  --color-background-variant: rgb(var(--color-background-variant-rgb));
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -35,9 +39,8 @@ a {
 
 a:hover {
   opacity: 0.7;
-  text-decoration: none; /* Explicitly remove underline on hover */
+  text-decoration: none; 
 }
-
 /* New class for light background pages */
 .light-background {
   background-color: var(--color-background-light);

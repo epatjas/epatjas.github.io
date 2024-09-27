@@ -12,7 +12,6 @@ function Header({ isLight = false }) {
         <nav>
           <NavLink to="/work" activeClassName="active">Work</NavLink>
           <NavLink to="/about" activeClassName="active">About</NavLink>
-          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
         </nav>
       </div>
     </header>

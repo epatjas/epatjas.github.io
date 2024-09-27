@@ -3,95 +3,137 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer'; 
 import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
 import './About.css';
 
-function About() {
-  const experiences = [
-    {
-      company: "Otava Learning",
-      duration: "08/2023—09/2024",
-      title: "Principal Designer",
-      description: [
-        "In my role as Principal Designer, I led the overall design vision for Otava Learning's online learning platform. My work involved crafting a user-centric design, focusing on creating an intuitive and effective learning experience that is both engaging and accessible to all.",
-        "As part of a dedicated team, I worked at the intersection of design and technology to transform our approach to education. Drawing on the high standards of the dynamic landscape of the publishing industry, I strived to create a platform that is not just functional, but also enjoyable to use and adds value to the learning journey of each individual user.",
-        "Through my work, I aimed to contribute to the advancement of Edtech solutions and champion the importance of good design in facilitating improved learning outcomes."
-      ]
-    },
-    {
-      company: "Kuudes",
-      duration: "08/2020—07/2023",
-      title: "Design Lead",
-      description: [
-        "At Kuudes I'm spending my days making sense of our clients' business challenges and turning my understanding into great designs. I facilitate ways of working between the client and the team, helping our clients evolve the way they work along the way. My superpower is asking the right questions to understand both the client's position and their users' problems, and coming up with solutions that benefit both.",
-        "Design Lead at Otava Oppimisen palvelut (08/2022 -> ongoing)"
-      ]
-    }
-    // Add more experiences as needed
+const About = () => {  // Changed from 'function About()' to 'const About = () =>'
+  // Remove the experiences array as it's no longer needed
+
+  const approachItems = [
+    { title: "Shared ownership", description: "Whether I work independently or integrate with your team, everyone comes along the process." },
+    { title: "I work fast, I mean like <em>really</em> fast", description: "Quick iteration allows us to zoom through explorations until we arrive at something that feels just right." },
+    { title: "Show and tell", description: "I frequently share work in progress, usually in the form of screen recordings with a voice over." },
+    { title: "Bias for action", description: "I prefer creating tangible artifacts to visualize the team's ideas over lengthy documents that often go ignored." },
+    { title: "I work in systems", description: "Whether it's a small feature or an entire design system, I create reusable components for the team." },
+    { title: "Design is thinking", description: "I am not afraid to throw away an idea and explore divergent solutions. The more the merrier!" }
   ];
 
+  const testimonials = [
+    {
+      quote: "Elina is a master at taming the chaos. She has the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems. She is proactive, works with little to no direction — and she's also very fast!",
+      author: "Anna Hallikainen",
+      position: "Development Director, Otava Learning",
+      avatar: "/images/anna.png"
+    },
+    {
+      quote: "I cannot recommend Elina enough. Truly world-class in every sense of the word. From helping to visualize an ambitious product story & vision, to playing an active role in bringing on senior full-time talent, and everything in between - Elina can seemingly do it all. Our product, team, culture, and customers are in a stronger position thanks to our time together.",
+      author: "Rami Ertimo",
+      position: "Front End Architect, Asteroid",
+      avatar: "/images/rami.png"
+    },
+    {
+      quote: "Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she guided the UX team with admirable serenity. In a short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organisation!",
+      author: "Kristiina Ahonen",
+      position: "Senior Content Designer, Kuudes",
+      avatar: "/images/krisse.png"
+    },
+    {
+      quote: "Elina has created the new visual and UX concept for city of Helsinki's main website and helped us to build our brand experience in the digital world. Elina has also been instrumental in creating our UX/UI design ways of working and training our UX/UI team and scaling our models across the organisation. Elina is incredible with documentation and building collaboration with software development. She has also contributed a great deal to our team's wellbeing and positive atmosphere.",
+      author: "Anni Leppänen",
+      position: "Lead Service Designer, City of Helsinki",
+      avatar: "/images/anni.png"
+    }
+  ];
 
-      return (
+  const faqQuestions = [
+    {
+      question: "What is fractional design leadership?",
+      answer: "Fractional leadership is a flexible model where organizations engage part-time design leaders to drive and guide design strategies and initiatives. Fractional Design Leaders provide valuable insights, mentorship, and direction to enhance the overall design capabilities and outcomes of the organization, without the need for full-time employment."
+    },
+    {
+      question: "Why not to hire full-time product designer?",
+      answer: "Navigating the hiring process for a full-time designer can be really risky and time-consuming. A bad hire can have detrimental effects on company culture and founders don't always know how to identify the best designer for their long-term needs. Opting to work with me offers a flexible and lower-commitment solution, ideal for situations where time is of the essence and you need to quickly bring your ideas to life without the potential risks associated with a permanent hire. Additionally, as our partnership evolves, I can guide you in building your own dedicated design team, facilitating a seamless transition to capable hands that align with your long-term goals."
+    },
+    {
+      question: "What is your pricing structure?",
+      answer: "I focus on bringing exceptional expertise and product intuition with urgency and high craft. That's why I prefer to work with a flat weekly retainer. That way we can focus on the work without worrying about tracking hours, limited revisions, or rigidly defined scopes. We end when the work is done."
+    },
+    {
+      question: "What's your availability?",
+      answer: "I'm generally available every weekday through Slack and open to Zoom/in-person meetings on Tuesdays and Thursdays. I find it's best to agree on milestones for the week/month and then focus on delivering those in time, rather than worrying about tracking time."
+    }
+  ];
+
+  const clients = [
+    "Otava Learning",
+    "City of Helsinki",
+    "Fira",
+    "Vaisala",
+    "Kotipizza",
+    "Hartwall",
+    "Kone",
+    "Froneri Finland",
+    "Metso",
+    // Add more clients as needed
+  ];
+
+  return (
     <div className="about-page">
       <section className="about-me">
         <h2>About Me</h2>
         <div className="about-content">
-          <div className="about-text">
-            <p>I'm a somewhat rare full-stack product designer. Started off my career within business design and product management, but quickly found myself deeply involved with UX research and -design and at the same time digging my toes into front-end development.</p>
-            <p>This skillset has helped me to manage extremely complex products and deliver outstanding results. My superpower is seeing the bigger picture, understand both the business objectives and their users' problems, and coming up with solutions that benefit both.</p>
-          </div>
           <div className="about-image">
-            <img src="/images/elina.png" alt="Elina Patjas" />
+            <img src="/images/elina.png" alt="Profile" />
+          </div>
+          <div className="about-text">
+            <h3>I help companies ship products fast without compromising quality.</h3>
+            <p>I've spent the last decade building products for the world's top tech companies. Today, I partner with founders to bring their ideas to life. As a design partner, I will:</p>
+            <ul>
+              <li>Help you shape your product strategy without drowning in docs</li>
+              <li>Quickly create high-fidelity interactive prototypes to validate ideas</li>
+              <li>Collaborate directly with engineering teams to iterate swiftly</li>
+              <li>Build and nurture a design team that's set up for success</li>
+            </ul>
+            <a href="/path/to/resume" className="view-resume">View resume →</a>
           </div>
         </div>
       </section>
       
-      <section className="experience">
-        <h2>Experience</h2>
-        {experiences.map((job, index) => (
-          <div key={index} className="job-entry">
-            <div className="job-info">
-              <h3>{job.company}</h3>
-              <span className="job-duration">{job.duration}</span>
-              <h4>{job.title}</h4>
+      <section className="approach">
+        <h2>Approach</h2>
+        <div className="approach-grid">
+          {approachItems.map((item, index) => (
+            <div key={index} className="approach-item">
+              <h3>
+                <span className="approach-number">{`0${index + 1}`}</span>{' '}
+                <span dangerouslySetInnerHTML={{ __html: item.title }} />
+              </h3>
+              <p>{item.description}</p>
             </div>
-            <div className="job-description">
-              {job.description.map((paragraph, pIndex) => (
-                <p key={pIndex}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       <Testimonials 
-        title="What Colleagues Say"
-        quote="Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she has a great eye for details. In a relatively short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organization!"
-        author="Kristiina Ahola"
-        position="Senior Content Designer, Hel.fi program"
+        title="In their words"
+        testimonials={testimonials}
       />
 
       <section className="clients-section">
         <h2>Clients</h2>
-        <div className="clients-content">
-          <p className="clients-intro">
-            I've had the pleasure of working with some great clients along the way. Here are some them.
-          </p>
-          <ul className="clients-list">
-            <li>Otava Learning</li>
-            <li>City of Helsinki</li>
-            <li>Fira</li>
-            <li>Vaisala</li>
-            <li>Kotipizza</li>
-            <li>Hartwall</li>
-            <li>Kone</li>
-            <li>Froneri Finland</li>
-            <li>Metso</li>
-            <li>& many more</li>
-          </ul>
+        <p>I've had the pleasure of working with some great clients along the way. Here are some of them.</p>
+        <div className="clients-list-container">
+          <div className="clients-list">
+            {clients.concat(clients).map((client, index) => (
+              <span key={index} className="client-name">{client}</span>
+            ))}
+          </div>
         </div>
       </section>
+
+      <FAQ questions={faqQuestions} />
     </div>
   );
-}
+};
 
-export default About;
+export default About;  // Make sure this line is present

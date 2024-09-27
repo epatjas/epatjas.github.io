@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
+import SocialDock from './components/SocialDock';
 import './GlobalStyles.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
+        <SocialDock />
       </div>
     </Router>
   );

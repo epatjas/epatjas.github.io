@@ -1,0 +1,10 @@
+.page-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.page-wrapper.work-page {
+  background-color: white;
+  color: black;
+}

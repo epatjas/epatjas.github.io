@@ -1,0 +1,55 @@
+.social-dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(18, 18, 18, 0.8);
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-dock a {
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-dock a:hover {
+  color: #ccc;
+  transform: scale(1.2);
+}
+
+/* Style for the custom SVG icon */
+.social-dock .custom-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Add this new rule for the tooltip */
+.social-dock a:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.social-dock svg {
+  width: 20px;
+  height: 20px;
+}
