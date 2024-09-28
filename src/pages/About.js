@@ -87,7 +87,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
           </div>
           <div className="about-text">
             <h3>I help companies ship products fast without compromising quality.</h3>
-            <p>I've spent the last decade building products for the world's top tech companies. Today, I partner with founders to bring their ideas to life. As a design partner, I will:</p>
+            <p>I've spent the last decade building products for tech companies. Today, I partner with founders to bring their ideas to life. As your design partner, I will:</p>
             <ul>
               <li>Help you shape your product strategy without drowning in docs</li>
               <li>Quickly create high-fidelity interactive prototypes to validate ideas</li>
@@ -115,7 +115,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
       </section>
 
       <Testimonials 
-        title="In their words"
+        title="Don't take my word for it"
         testimonials={testimonials}
       />
 

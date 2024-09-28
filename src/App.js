@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
 import SocialDock from './components/SocialDock';
+import CaseStudyHel from './pages/CaseStudyHel'; // Make sure this matches your file name
 import './GlobalStyles.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
+          <Route path="/work/helfi" element={<CaseStudyHel />} />
         </Routes>
         <Footer />
         <SocialDock />

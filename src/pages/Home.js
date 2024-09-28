@@ -8,7 +8,7 @@ import './Home.css';
 function Home() {
   const highlightedProjects = [
     { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/nova-brand' },
-    { id: '02', image: '/images/helsinki.png', project: 'Online learning platform', client: 'Otava Learning', link: '/work/online-learning-platform' },
+    { id: '02', image: '/images/helsinki.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/helfi' },
     { id: '03', image: '/images/Fira.png', project: 'Nova AI', client: 'Otava Learning', link: '/work/nova-ai' },
   ];
 
