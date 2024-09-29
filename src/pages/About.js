@@ -23,25 +23,25 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
       quote: "Elina is a master at taming the chaos. She has the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems. She is proactive, works with little to no direction — and she's also very fast!",
       author: "Anna Hallikainen",
       position: "Development Director, Otava Learning",
-      avatar: "/images/anna.png"
+      avatar: getImagePath('anna.png')
     },
     {
       quote: "I cannot recommend Elina enough. Truly world-class in every sense of the word. From helping to visualize an ambitious product story & vision, to playing an active role in bringing on senior full-time talent, and everything in between - Elina can seemingly do it all. Our product, team, culture, and customers are in a stronger position thanks to our time together.",
       author: "Rami Ertimo",
       position: "Front End Architect, Asteroid",
-      avatar: "/images/rami.png"
+      avatar: getImagePath('rami.png')
     },
     {
       quote: "Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she guided the UX team with admirable serenity. In a short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organisation!",
       author: "Kristiina Ahonen",
       position: "Senior Content Designer, Kuudes",
-      avatar: "/images/krisse.png"
+      avatar: getImagePath('krisse.png')
     },
     {
       quote: "Elina has created the new visual and UX concept for city of Helsinki's main website and helped us to build our brand experience in the digital world. Elina has also been instrumental in creating our UX/UI design ways of working and training our UX/UI team and scaling our models across the organisation. Elina is incredible with documentation and building collaboration with software development. She has also contributed a great deal to our team's wellbeing and positive atmosphere.",
       author: "Anni Leppänen",
       position: "Lead Service Designer, City of Helsinki",
-      avatar: "/images/anni.png"
+      avatar: getImagePath('anni.png')
     }
   ];
 

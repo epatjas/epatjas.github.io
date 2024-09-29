@@ -17,7 +17,7 @@ const projects = [
     client: 'Otava Learning'
   },
   {
-    image: getImagePath('nova_ai.png'),
+    image: getImagePath('nova ai.png'),
     project: 'Nova AI',
     client: 'Otava Learning'
   },
@@ -34,7 +34,7 @@ const projects = [
     link: '/work/Hel_fi'
   },
   {
-    image: getImagePath('Coding Company.png'),
+    image: getImagePath('Coding company.png'),
     project: 'Coding Company Brand',
     client: 'Coding Company'
   },
