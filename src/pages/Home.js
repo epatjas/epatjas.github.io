@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import ProjectCard from '../components/ProjectCard';
 import './Home.css';
+import { getImagePath } from '../utils/imageUtils';
 
 function Home() {
   const highlightedProjects = [
-    { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/NovaBrand' },
-    { id: '02', image: '/images/hel_fi.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/Hel_fi' },
-    { id: '03', image: '/images/Fira.png', project: 'Fira Brand & Website', client: 'Fira', link: '/work/FiraBrand' },
+    { id: '01', image: getImagePath('Nova.png'), project: 'Nova Brand', client: 'Otava Learning', link: '/work/NovaBrand' },
+    { id: '02', image: getImagePath('hel_fi.png'), project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/Hel_fi' },
+    { id: '03', image: getImagePath('Fira.png'), project: 'Fira Brand & Website', client: 'Fira', link: '/work/FiraBrand' },
   ];
 
   return (
