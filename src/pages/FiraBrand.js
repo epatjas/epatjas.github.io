@@ -5,6 +5,7 @@ import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import CaseStudySection from '../components/CaseStudySection';
 import Header from '../components/Header';
 import './FiraBrand.css';
+import { getImagePath } from '../utils/imageUtils';
 
 function FiraBrand() {
   return (
@@ -20,7 +21,7 @@ function FiraBrand() {
         />
 
         <div className="full-width-image">
-          <img src="/images/Fira 01.png" alt="Fira Brand Overview" />
+          <img src={getImagePath('Fira 01.png')} alt="Fira Brand Overview" />
         </div>
 
         <CaseStudyParagraph 
@@ -32,7 +33,7 @@ function FiraBrand() {
 
         <CaseStudyApproach 
           title="Becoming the bold innovator of the construction industry"
-          image="/images/Fira 02.png"
+          image={getImagePath('Fira 02.png')}
           imageAlt="Fira Brand Approach"
           steps={[
             {
@@ -53,14 +54,14 @@ function FiraBrand() {
         <CaseStudySection 
           title="Challenge"
           description1="Fira was faced with an outdated brand identity and a website that lacked the sophistication and functionality required to serve its growing client base effectively. The company needed a brand renewal and a new digital platform that would reflect its modern approach to construction, highlight its broad range of services, and provide an improved user experience for clients and partners."
-          image="/images/Fira 04.png"
+          image={getImagePath('Fira 04.png')}
         />
 
         <CaseStudySection
           title="Solution"
           description1="The brand renewal began with a thorough analysis of Fira's existing brand identity and market positioning. The findings paved the way for a renewed brand that was modern, bold, and reflective of Fira's industry-leading innovations. We created a new visual identity, including a refreshed logo, color palette, typography, and brand guidelines."
           description2="Simultaneously, the website redesign was undertaken with a focus on improving user experience. The new site incorporated clear, impactful messaging that communicated Fira's innovative approach to construction. We also developed a comprehensive digital design system to ensure a consistent user experience across all platforms."
-          image="/images/Fira 05.png"
+          image={getImagePath('Fira 05.png')}
         />
 
         <CaseStudyParagraph 

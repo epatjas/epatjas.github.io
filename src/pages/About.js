@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import './About.css';
+import { getImagePath } from '../utils/imageUtils';
 
 const About = () => {  // Changed from 'function About()' to 'const About = () =>'
   // Remove the experiences array as it's no longer needed
@@ -82,7 +83,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
         <h2>About Me</h2>
         <div className="about-content">
           <div className="about-image">
-            <img src="/images/elina.png" alt="Profile" />
+            <img src={getImagePath('elina.png')} alt="Profile" />
           </div>
           <div className="about-text">
             <h3>I help companies ship products fast without compromising quality.</h3>

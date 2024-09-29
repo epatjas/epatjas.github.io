@@ -2,38 +2,39 @@ import React from 'react';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import './Work.css';
+import { getImagePath } from '../utils/imageUtils';
 
 const projects = [
   {
-    image: '/images/nova_brand.png',
+    image: getImagePath('nova_brand.png'),
     project: 'Nova Brand',
     client: 'Otava Learning',
     link: '/work/NovaBrand'
   },
   {
-    image: '/images/platform.png',
+    image: getImagePath('platform.png'),
     project: 'Online Learning Platform',
     client: 'Otava Learning'
   },
   {
-    image: '/images/nova ai.png',
+    image: getImagePath('nova_ai.png'),
     project: 'Nova AI',
     client: 'Otava Learning'
   },
   {
-    image: '/images/Fira.png',
+    image: getImagePath('Fira.png'),
     project: 'Fira Brand & Website',
     client: 'Fira',
     link: '/work/FiraBrand'
   },
   {
-    image: '/images/hel_fi.png',
+    image: getImagePath('hel_fi.png'),
     project: 'Hel.fi Renewal',
     client: 'City of Helsinki',
     link: '/work/Hel_fi'
   },
   {
-    image: '/images/Coding Company.png',
+    image: getImagePath('Coding Company.png'),
     project: 'Coding Company Brand',
     client: 'Coding Company'
   },

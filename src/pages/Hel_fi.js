@@ -7,6 +7,7 @@ import CaseStudyProjects from '../components/CaseStudyProjects';
 import './Hel_fi.css'; 
 import Header from '../components/Header';
 import CaseStudySection from '../components/CaseStudySection';
+import { getImagePath } from '../utils/imageUtils';
 
 function Hel_fi() {
   const projectsData = {
@@ -15,17 +16,17 @@ function Hel_fi() {
     projects: [
       {
         title: "Healthcare",
-        image: "/images/Terveyspalvelut.png",
+        image: getImagePath('Terveyspalvelut.png'),
         description: "One of the first pilot projects in hel.fi was renewing the most used part of the web service - Helsinki health stations and the services they provide. My goal was to focus on findability and clear user paths to help everydaycitizens find the best possible way to access the services they need."
       },
       {
         title: "Guiding the senior citizens",
-        image: "/images/Senioripalvelut.png",
+        image: getImagePath('Senioripalvelut.png'),
         description: "In this project, my goal was to help senior citizens find relevant services to them. In order to help them understand the service processes, we created visualised user paths with the focus on very clear structure and accessibility."
       },
       {
         title: "Easier access to decision making",
-        image: "/images/decision-makingproject.png",
+        image: getImagePath('decision-makingproject.png'),
         description: "Our aim was to help citizens keep abreast of how Helsinki is changing and to make it easier to understand the decision-making processes. We were focusing on making a service where finding and reviewing things quickly is as intuitive as possible."
       }
     ]
@@ -45,7 +46,7 @@ function Hel_fi() {
         />
 
         <div className="full-width-image">
-          <img src="/images/main-image.png" alt="Hel.fi project overview" />
+          <img src={getImagePath('main-image.png')} alt="Hel.fi project overview" />
         </div>
 
         <CaseStudyParagraph
@@ -58,7 +59,7 @@ function Hel_fi() {
 
         <CaseStudyApproach 
           title="Translating the Helsinki brand into a digital experience"
-          image="/images/Helsinki brand digital experience.png"
+          image={getImagePath('Helsinki brand digital experience.png')}
           imageAlt="Helsinki digital experience"
           steps={[
             {
@@ -80,7 +81,7 @@ function Hel_fi() {
           title="Integrating design into the city organization"
           description1="The journey to renew the whole hel.fi is ongoing and will altogether take more than two years. The scale of the project is so massive that the City of Helsinki decided to split it into smaller entities, focusing on one theme and industry at a time."
           description2="We gathered expert teams from various fields and trained them to utilise design thinking methods as part of their day-to-day work. In addition to building a new site, we coach the design team, product owners, and other internal stakeholders, as well as plan design processes and integrate customer-centric thinking into the organisation."
-          image="/images/digital styleguide.png"
+          image={getImagePath('digital styleguide.png')}
         />
 
         <CaseStudyTestimonial 
@@ -88,7 +89,7 @@ function Hel_fi() {
           authorName="Anni Leppänen"
           authorTitle="Lead Service Designer"
           authorCompany="City Of Helsinki"
-          authorImage="/images/anni leppanen.png"
+          authorImage={getImagePath('anni leppanen.png')}
         />
 
         <CaseStudyProjects 

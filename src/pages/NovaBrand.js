@@ -5,6 +5,7 @@ import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import CaseStudySection from '../components/CaseStudySection';
 // Remove this line: import Header from '../components/Header';
 import './NovaBrand.css'; 
+import { getImagePath } from '../utils/imageUtils';
 
 function NovaBrand() {
   return (
@@ -20,19 +21,19 @@ function NovaBrand() {
         />
 
         <div className="full-width-image">
-          <img src="/images/Nova 01.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 01.png')} alt="Nova Brand Overview" />
         </div>
 
         <CaseStudySection 
           title="Where education meets innovation"
           description1="Otava Learning, a major Finnish publishing company specializing in educational materials, found itself at a crossroads in the digital age. As the company shifted its strategy towards service centricity, moving away from marketing individual products, it became apparent that their digital services were disconnected and lacked a unified user experience."
           description2="This fragmentation was hindering Otava's ability to provide a cohesive, user-friendly platform for online learning."
-          image="/images/Nova 02.png" 
+          image={getImagePath('Nova 02.png')} 
         />
 
-        <img src="/images/Nova 03.png" alt="Nova Brand Hero" className="full-width-image" />
-        <img src="/images/Nova 04.png" alt="Nova Brand Hero" className="full-width-image" />
-        <img src="/images/Nova 05.png" alt="Nova Brand Hero" className="full-width-image" />
+        <img src={getImagePath('Nova 03.png')} alt="Nova Brand Hero" className="full-width-image" />
+        <img src={getImagePath('Nova 04.png')} alt="Nova Brand Hero" className="full-width-image" />
+        <img src={getImagePath('Nova 05.png')} alt="Nova Brand Hero" className="full-width-image" />
 
         <CaseStudySection
           title="Embracing a new chapter"
@@ -43,20 +44,20 @@ function NovaBrand() {
             "Develop a comprehensive design system to ensure consistency across all Otava products.",
             "Create a brand that would resonate with both educators and students while maintaining Otava's reputation for quality educational content."
           ]}
-          image="/images/Nova 06.png" 
+          image={getImagePath('Nova 06.png')} 
         />
          <div className="full-width-image">
-          <img src="/images/Nova 07.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 07.png')} alt="Nova Brand Overview" />
         </div>
 
         <div className="full-width-image">
-          <img src="/images/Nova 08.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 08.png')} alt="Nova Brand Overview" />
         </div>
 
 
         <CaseStudyApproach 
           title="A better future for every learner."
-          image="/images/Nova 09.png"
+          image={getImagePath('Nova 09.png')}
           steps={[
             {
               title: "Strategic Brand Foundations",
@@ -82,18 +83,18 @@ function NovaBrand() {
     "Tone of Voice: We established guidelines for Nova's communication style, ensuring consistency in messaging across all platforms and touchpoints.",
     "Design System: A comprehensive design system was created and documented, serving as a single source of truth for implementing the Nova brand across all Otava products. This system included detailed specifications for UI components, page templates, and interaction patterns."
   ]}
-  image="/images/Nova 11.png"
+  image={getImagePath('Nova 11.png')}
 />
     <div className="full-width-image">
-          <img src="/images/Nova 12.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 12.png')} alt="Nova Brand Overview" />
         </div>
 
         <div className="full-width-image">
-          <img src="/images/Nova 13.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 13.png')} alt="Nova Brand Overview" />
         </div>
 
         <div className="full-width-image">
-          <img src="/images/Nova 14.png" alt="Nova Brand Overview" />
+          <img src={getImagePath('Nova 14.png')} alt="Nova Brand Overview" />
         </div>
 
 
