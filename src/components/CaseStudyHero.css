@@ -14,21 +14,22 @@
 
 .case-study-title-container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  max-width: 1200px;
   overflow: hidden;
 }
 
 .case-study-title {
-  font-size: clamp(2rem, 14vw, 20rem);
+  font-size: 20rem; /* Starting large size */
   font-weight: normal;
   line-height: 1;
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensure the title takes full width */
+  width: 100%;
+  text-align: left;
 }
+
+/* Remove any media queries related to .case-study-title font-size */
 
 .case-study-intro {
   display: flex;

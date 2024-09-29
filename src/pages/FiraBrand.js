@@ -9,7 +9,7 @@ import './FiraBrand.css';
 function FiraBrand() {
   return (
     <div className="light-background">
-      <Header isLight={true} />
+      <Header isLight={false} /> {/* Changed to false for dark variant */}
       <div className="container">
         <CaseStudyHero 
           title="Fira Brand"

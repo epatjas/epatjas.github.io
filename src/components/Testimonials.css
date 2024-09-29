@@ -99,7 +99,7 @@
   scroll-snap-align: center;
   background-color: #1A1A1A;
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 2rem; /* Increase padding for better spacing */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #262626;
   display: flex;
@@ -125,48 +125,53 @@
   background-color: #F2E2E0;
 }
 
-/* Adjust text color on hover for better readability */
 .testimonial-card:hover .testimonial-quote,
 .testimonial-card:hover .author-name,
 .testimonial-card:hover .author-position {
-  color: #000; /* Change text color to black on hover for better contrast */
+  color: #000; 
 }
 
 .testimonial-quote {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Increase margin to separate quote from author info */
+  flex-grow: 1; /* Allow quote to take up available space */
 }
 
 .testimonial-author {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Spread items to both ends */
+  justify-content: space-between;
+  width: 100%;
+  /* flex-direction: column; -- Remove this line */
 }
 
 .author-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
+  align-items: flex-start;
+  flex-grow: 1; /* This will push the avatar to the right */
 }
 
 .author-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  margin-left: 1rem; /* This adds space between the info and the avatar */
 }
 
 .author-name {
   font-weight: bold;
-  margin: 0;
-  text-align: left; /* Align text to the left */
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem; 
+  text-align: left;
 }
 
 .author-position {
   font-size: 0.9rem;
   color: #999;
   margin: 0;
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .carousel-controls {
@@ -197,12 +202,50 @@
 
 @media (min-width: 768px) {
   .testimonial-card {
-    width: calc(50% - 2rem);
+    width: calc(100% - 2rem);
+    max-width: 600px; /* Limit maximum width */
   }
 }
 
 @media (min-width: 1024px) {
   .testimonial-card {
     width: calc(33.33% - 2rem);
+    max-width: 400px; /* Adjust maximum width for larger screens */
   }
+}
+
+.testimonial-card-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.testimonial-card-author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.testimonial-card-author-name {
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem; 
+  text-align: left;
+}
+
+.testimonial-card-author-position {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
+  text-align: left;
+}
+
+.testimonial-card-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-left: 1rem;
+  flex-shrink: 0; /* Prevent the image from shrinking */
 }

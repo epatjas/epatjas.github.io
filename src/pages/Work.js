@@ -7,7 +7,8 @@ const projects = [
   {
     image: '/images/nova_brand.png',
     project: 'Nova Brand',
-    client: 'Otava Learning'
+    client: 'Otava Learning',
+    link: '/work/NovaBrand'
   },
   {
     image: '/images/platform.png',
@@ -22,12 +23,14 @@ const projects = [
   {
     image: '/images/Fira.png',
     project: 'Fira Brand & Website',
-    client: 'Fira'
+    client: 'Fira',
+    link: '/work/FiraBrand'
   },
   {
     image: '/images/hel_fi.png',
     project: 'Hel.fi Renewal',
-    client: 'City of Helsinki'
+    client: 'City of Helsinki',
+    link: '/work/Hel_fi'
   },
   {
     image: '/images/Coding Company.png',
@@ -40,7 +43,7 @@ const projects = [
 function Work() {
   return (
     <div className="workPage">
-      <Header isLight={true} />
+      <Header isLight={false} />
       <main className="work-content">
         <h1 className="work-title">Selected Projects (20-24)</h1>
         <div className="project-grid">

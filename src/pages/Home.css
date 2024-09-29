@@ -99,6 +99,28 @@ h2 {
     margin-bottom: 3.75rem;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* Adjust as needed */
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.see-all-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.see-all-link:hover {
+    opacity: 0.7;
+}
+
 .highlighted-projects h2 {
     font-size: 2rem;
     margin-bottom: 0;

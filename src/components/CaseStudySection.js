@@ -1,7 +1,7 @@
 import React from 'react';
 import './CaseStudySection.css';
 
-function CaseStudySolution({ title, description1, description2, image }) {
+function CaseStudySection({ title, description1, description2, bulletPoints, image }) {
   return (
     <section className="solution-section">
       <div className="solution-content">
@@ -10,16 +10,25 @@ function CaseStudySolution({ title, description1, description2, image }) {
         </div>
         <div className="solution-text">
           <p>{description1}</p>
-          <p>{description2}</p>
+          {description2 && <p>{description2}</p>}
+          {bulletPoints && (
+            <ul>
+              {bulletPoints.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
-      <div className="solution-image">
-        <img src={image} alt="Digital Styleguide" />
-      </div>
+      {image && (
+        <div className="solution-image">
+          <img src={image} alt={title} />
+        </div>
+      )}
     </section>
   );
 }
 
-export default CaseStudySolution;
+export default CaseStudySection;
 
 

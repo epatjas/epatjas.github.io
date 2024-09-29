@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+// Remove this line: import Header from '../components/Header';
 import Testimonials from '../components/Testimonials';
 import ProjectCard from '../components/ProjectCard';
 import './Home.css';
 
 function Home() {
   const highlightedProjects = [
-    { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/nova-brand' },
-    { id: '02', image: '/images/helsinki.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/Hel_fi' },
+    { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/NovaBrand' },
+    { id: '02', image: '/images/hel_fi.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/Hel_fi' },
     { id: '03', image: '/images/Fira.png', project: 'Fira Brand & Website', client: 'Fira', link: '/work/FiraBrand' },
   ];
 
   return (
-    <div className="home-page">
-      <Header />
+    <div className="home-page dark-theme">
+      {/* Remove this line: <Header /> */}
       <main>
         <section className="hero">
           <h1>I'm a Principal Product Designer with 15+ years of experience in crafting high-quality designs, interactions, and products.</h1>
@@ -44,7 +44,10 @@ function Home() {
         </section>
 
         <section className="highlighted-projects">
-          <h2>Highlighted projects</h2>
+          <div className="section-header">
+            <h2>Highlighted projects</h2>
+            <Link to="/work" className="see-all-link">See all ›</Link>
+          </div>
           <div className="project-grid">
             {highlightedProjects.map((project) => (
               <ProjectCard
@@ -57,7 +60,6 @@ function Home() {
               />
             ))}
           </div>
-          <Link to="/work" className="see-all">See all ›</Link>
         </section>
 
         <Testimonials 

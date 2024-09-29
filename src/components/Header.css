@@ -1,33 +1,37 @@
 .header-dark {
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-text);
 }
 
 .header-light {
-    background-color: var(--color-background-light);
+    background-color: transparent;
     color: var(--color-text-light);
 }
 
 .header {
-    padding: 20px 40px;
+    padding: 10px 40px; 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    background-color: transparent;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    max-width: 1400px; /* Default max-width for non-case study pages */
+    margin: 0 auto; /* Center the content */
+    width: 100%;
 }
 
 .logo {
     font-size: 18px;
     text-decoration: none;
+    color: var(--color-text);
+    margin-top: 5px; 
 }
 
 .header-dark .logo,
@@ -61,4 +65,57 @@ nav a.active::after {
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
+}
+
+.case-study-header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.close-button {
+    background-color: rgba(200, 200, 200, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Push the button to the right */
+    margin-top: 5px; /* Add a small top margin if needed */
+}
+
+.close-button:hover {
+    background-color: rgba(180, 180, 180, 0.9);
+}
+
+.close-button svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.case-study-header .header-content {
+    justify-content: space-between;
+}
+
+/* Ensure the logo stays on the left even in case study pages */
+.case-study-header .logo {
+    margin-right: auto;
 }

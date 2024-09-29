@@ -27,12 +27,12 @@ function Testimonials({ title, testimonials = [] }) {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
               <p className="testimonial-quote">{testimonial.quote}</p>
-              <div className="testimonial-author">
-                <div className="author-info">
-                  <p className="author-name">{testimonial.author}</p>
-                  <p className="author-position">{testimonial.position}</p>
+              <div className="testimonial-card-author">
+                <div className="testimonial-card-author-info">
+                  <p className="testimonial-card-author-name">{testimonial.author}</p>
+                  <p className="testimonial-card-author-position">{testimonial.position}</p>
                 </div>
-                <img src={testimonial.avatar} alt={testimonial.author} className="author-avatar" />
+                <img src={testimonial.avatar} alt={testimonial.author} className="testimonial-card-author-avatar" />
               </div>
             </div>
           ))}

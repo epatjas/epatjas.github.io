@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 import Footer from '../components/Footer'; 
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
@@ -78,7 +77,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
   ];
 
   return (
-    <div className="about-page">
+    <div className="about-page dark-theme">  
       <section className="about-me">
         <h2>About Me</h2>
         <div className="about-content">

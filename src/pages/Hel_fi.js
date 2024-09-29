@@ -33,7 +33,7 @@ function Hel_fi() {
 
   return (
     <div className="light-background">
-      <Header isLight={true} />
+      <Header isLight={false} />
       <div className="container">
         {/* Existing content wrapped in the container */}
         <CaseStudyHero 

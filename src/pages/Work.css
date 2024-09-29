@@ -1,6 +1,6 @@
 .workPage {
   background-color: var(--color-background-light);
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

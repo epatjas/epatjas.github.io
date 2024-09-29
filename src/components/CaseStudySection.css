@@ -41,6 +41,33 @@
     height: auto;
 }
 
+.solution-text ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.solution-text li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1.125rem;
+}
+
+.solution-text li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000; /* You can change this to match your brand color */
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.solution-text li:last-child {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     .solution-content {
         flex-direction: column;
