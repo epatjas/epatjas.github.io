@@ -1,0 +1,48 @@
+.solution-section {
+    margin: 80px 0;
+}
+
+.solution-label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.solution-content {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.solution-title {
+    width: 40%;
+}
+
+.solution-title h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.solution-text {
+    flex: 1;
+}
+
+.solution-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.solution-image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .solution-content {
+        flex-direction: column;
+    }
+}

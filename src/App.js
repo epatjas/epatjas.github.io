@@ -6,8 +6,9 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import About from './pages/About';
 import SocialDock from './components/SocialDock';
-import CaseStudyHel from './pages/CaseStudyHel'; // Make sure this matches your file name
+import Hel_fi from './pages/Hel_fi';
 import './GlobalStyles.css';
+import FiraBrand from './pages/FiraBrand';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
-          <Route path="/work/helfi" element={<CaseStudyHel />} />
+          <Route path="/work/Hel_fi" element={<Hel_fi />} />
+          <Route path="/work/FiraBrand" element={<FiraBrand />} />
         </Routes>
         <Footer />
         <SocialDock />

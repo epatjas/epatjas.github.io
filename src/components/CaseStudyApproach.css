@@ -1,0 +1,88 @@
+.case-study-approach {
+  background-color: #E6F0FF;
+  padding: 80px 40px;
+  margin: 80px 0;
+  border-radius: 20px;
+}
+
+.approach-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.approach-header {
+  margin-bottom: 40px;
+}
+
+.approach-header h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.approach-header h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 70%;
+}
+
+.approach-image {
+  margin-bottom: 40px;
+}
+
+.approach-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.approach-steps {
+  display: flex;
+  gap: 40px;
+}
+
+.approach-step {
+  flex: 1;
+  position: relative;
+}
+
+.step-number {
+  background-color: #C7DCFF;
+  color: #0000FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.approach-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.approach-step p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .case-study-approach {
+    padding: 60px 20px;
+  }
+
+  .approach-header h2 {
+    max-width: 100%;
+  }
+
+  .approach-steps {
+    flex-direction: column;
+  }
+}

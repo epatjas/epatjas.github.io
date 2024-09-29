@@ -8,8 +8,8 @@ import './Home.css';
 function Home() {
   const highlightedProjects = [
     { id: '01', image: '/images/Nova.png', project: 'Nova Brand', client: 'Otava Learning', link: '/work/nova-brand' },
-    { id: '02', image: '/images/helsinki.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/helfi' },
-    { id: '03', image: '/images/Fira.png', project: 'Nova AI', client: 'Otava Learning', link: '/work/nova-ai' },
+    { id: '02', image: '/images/helsinki.png', project: 'New Hel.fi', client: 'City of Helsinki', link: '/work/Hel_fi' },
+    { id: '03', image: '/images/Fira.png', project: 'Fira Brand & Website', client: 'Fira', link: '/work/FiraBrand' },
   ];
 
   return (

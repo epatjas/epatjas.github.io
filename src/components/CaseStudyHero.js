@@ -1,0 +1,33 @@
+import React from 'react';
+import './CaseStudyHero.css'; // We'll create this CSS file next
+
+export function CaseStudyHero({ title, subtitle, services, client, year }) {
+  return (
+    <div className="case-study-hero">
+      <div className="case-study-hero-content">
+        <h1 className="case-study-title">{title}</h1>
+        <div className="case-study-intro">
+          <p className="case-study-subtitle">{subtitle}</p>
+          <div className="case-study-details">
+            <div className="case-study-detail services">
+              <h3>SERVICES</h3>
+              <p>
+                {services.map((service, index) => (
+                  <span key={index} className="pill">{service}</span>
+                ))}
+              </p>
+            </div>
+            <div className="case-study-detail client">
+              <h3>CLIENT</h3>
+              <p>{client}</p>
+            </div>
+            <div className="case-study-detail year">
+              <h3>YEAR</h3>
+              <p>{year}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
