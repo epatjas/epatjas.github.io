@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pofo/static/css/main.751313c8.css",
+    "main.js": "/pofo/static/js/main.f13ca5db.js",
+    "index.html": "/pofo/index.html",
+    "main.751313c8.css.map": "/pofo/static/css/main.751313c8.css.map",
+    "main.f13ca5db.js.map": "/pofo/static/js/main.f13ca5db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.751313c8.css",
+    "static/js/main.f13ca5db.js"
+  ]
+}
