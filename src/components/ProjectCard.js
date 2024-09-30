@@ -13,8 +13,8 @@ function ProjectCard({ image, project, client, link, isLight = false }) {
         </div>
       </Link>
       <div className="project-card__info">
-        <h3 className="project-card__title">{project}</h3>
-        <p className="project-card__client">{client}</p>
+        <span className="project-card__title">{project}</span>
+        <span className="project-card__client">{client}</span>
       </div>
     </div>
   );

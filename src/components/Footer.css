@@ -2,58 +2,45 @@
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-main);
-  padding: 8rem 0 2rem; /* Increased top padding from 4rem to 8rem */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 4rem 2rem 2rem;
 }
 
-.footerContent, .footerBottom {
+.footerContent,
+.footerBottom {
+  max-width: 1400px;
+  margin: 0 auto;
   width: 100%;
-  max-width: var(--max-width);
-  box-sizing: border-box;
 }
 
 .footerContent {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+  justify-content: space-between;
   margin-bottom: 4rem;
 }
 
 .quote {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  max-width: 40%;
+  max-width: 50%;
   line-height: 1.2;
 }
 
-.quote p {
-  margin: 0;
-}
-
 .callToAction {
-  align-self: flex-end; /* Align to the right */
+  background-color: #1a1a1a;
+  border: 1px solid #262626;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 40%;
 }
 
-.collabLink {
-  color: var(--color-text);
-  text-decoration: none;
+.callToAction h3 {
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.arrow-icon {
-  width: 48px;
-  height: 48px;
-  transition: transform 0.3s ease;
-}
-
-.collabLink:hover .arrow-icon {
-  transform: translateX(5px);
+.callToAction p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footerBottom {
@@ -82,4 +69,50 @@
   font-size: 1rem;
   margin: 0;
   opacity: 0.7;
+}
+
+@media (max-width: 1440px) {
+  .footerContent,
+  .footerBottom {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .quote, .callToAction {
+    max-width: 100%;
+  }
+
+  .quote {
+    font-size: 2rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .callToAction h3 {
+    font-size: 1.25rem;
+  }
+
+  .callToAction p, .footerNav a, .copyright {
+    font-size: 0.9rem;
+  }
 }

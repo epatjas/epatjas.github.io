@@ -15,24 +15,20 @@ function Footer({ currentPath, isLight }) {
           <p>Quality rarely happens by accident. You have to work for it.</p>
         </div>
         <div className="callToAction">
-          <a href="/contact" className="collabLink">
-            Let's collab
-            <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+          <h3>Need a Design Partner?</h3>
+          <p>I'm currently prioritizing projects in education, and healthcare and biotech. Shoot me a note with your details at elina.patjas@gmail.com</p>
+          <p>Available in Fall 24.</p>
         </div>
       </div>
       <div className="footerBottom">
         <nav className="footerNav">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/">Overview</a></li>
             <li><a href="/work">Work</a></li>
             <li><a href="/about">About</a></li>
           </ul>
         </nav>
-        <p className="copyright">&copy; 2024 Elina Patjas. All rights reserved.</p>
+        <p className="copyright">Design & Development by Elina Patjas. Copyright © 2024.</p>
       </div>
     </footer>
   );

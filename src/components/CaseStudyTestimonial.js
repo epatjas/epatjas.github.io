@@ -3,15 +3,15 @@ import './CaseStudyTestimonial.css';
 
 export function CaseStudyTestimonial({ quote, authorName, authorTitle, authorCompany, authorImage }) {
   return (
-    <section className="case-study-testimonial">
-      <div className="testimonial-content">
-        <blockquote>{quote}</blockquote>
-        <div className="testimonial-author">
-          <img src={authorImage} alt={authorName} className="author-avatar" />
-          <div className="author-info">
-            <p className="author-name">{authorName}</p>
-            <p className="author-title">{authorTitle}</p>
-            <p className="author-company">{authorCompany}</p>
+    <section className="cs-testimonial">
+      <div className="cs-testimonial-content">
+        <blockquote className="cs-testimonial-quote">{quote}</blockquote>
+        <div className="cs-testimonial-author">
+          <img src={authorImage} alt={authorName} className="cs-author-avatar" />
+          <div className="cs-author-info">
+            <p className="cs-author-name">{authorName}</p>
+            <p className="cs-author-title">{authorTitle}</p>
+            <p className="cs-author-company">{authorCompany}</p>
           </div>
         </div>
       </div>

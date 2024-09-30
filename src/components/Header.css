@@ -9,7 +9,7 @@
 }
 
 .header {
-    padding: 10px 40px; 
+    padding: 10px 40px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -69,8 +69,8 @@ nav a.active::after {
 
 .case-study-header {
     position: fixed;
-    top: 20px;
     right: 20px;
+    left: 20px; /* Add left positioning */
     z-index: 1000;
 }
 
@@ -85,7 +85,7 @@ nav a.active::after {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    margin-left: auto; /* Push the button to the right */
+    margin-left: 10px; /* Add some space between logo and button */
     margin-top: 5px; /* Add a small top margin if needed */
 }
 
@@ -113,9 +113,59 @@ nav a.active::after {
 
 .case-study-header .header-content {
     justify-content: space-between;
+    align-items: center;
 }
 
 /* Ensure the logo stays on the left even in case study pages */
 .case-study-header .logo {
     margin-right: auto;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .case-study-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+  }
+  
+  .case-study-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .case-study-header .logo {
+    margin-right: auto;
+  }
+  
+  .close-button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-header {
+    padding: 8px 16px;
+  }
+  
+  .case-study-header .logo {
+    font-size: 1.125rem; /* Further reduced font size for very small screens */
+  }
+  
+  .close-button {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .close-button svg {
+    width: 14px;
+    height: 14px;
+  }
 }

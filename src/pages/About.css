@@ -47,8 +47,10 @@
 }
 
 .about-text h3 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+
 }
 
 /* List styling in About Me section */
@@ -63,7 +65,7 @@
   margin-bottom: 0.5rem;
   position: relative;
   padding-left: 1.5em;
-  font-size: 1.4rem;
+  font-size: 1.125rem;
 }
 
 .about-text li::before {
@@ -80,18 +82,14 @@
   color: #ffffff;
   text-decoration: none;
   margin-top: auto;
-  font-weight: regular;
+  font-weight: 400;
   font-size: 1.3rem;
 }
 
 .view-resume .arrow {
   margin-left: 0.3em;
-  font-size: 1.2em;
+  font-size: 1em; /* Match the text size */
   transition: transform 0.2s ease-in-out;
-}
-
-.view-resume:hover {
-  text-decoration: underline;
 }
 
 .view-resume:hover .arrow {
@@ -234,5 +232,123 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 1rem 16px; /* Adjust padding for mobile */
+  }
+
+  .about-page section {
+    margin-top: 3rem; /* Reduce top margin for sections */
+  }
+
+  .about-page h2 {
+    font-size: 1.75rem; /* Smaller font size for section titles */
+  }
+
+  /* About Me section */
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-image {
+    width: 100%; /* Full width image */
+    max-width: none; /* Remove max-width limitation */
+    margin: 0; /* Remove any margin */
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; /* Optional: remove border-radius for full-width effect */
+  }
+
+  .about-text h3 {
+    font-size: 1.75rem; /* Smaller font size */
+    margin-bottom: 0.75rem;
+  }
+
+  .about-text li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .view-resume {
+    font-size: 1.1rem; /* Slightly smaller font size */
+  }
+
+  /* Clients section */
+  .clients-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .clients-intro {
+    font-size: 1rem;
+  }
+
+  .clients-list li {
+    font-size: 2rem; /* Smaller font size for client names */
+  }
+
+  /* Approach section */
+  .approach-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1.5rem;
+  }
+
+  .approach-item {
+    padding: 16px 16px 16px 0px;
+  }
+
+  .approach-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .approach-item p {
+    font-size: 1rem;
+  }
+
+  /* Clients section with rolling animation */
+  .clients-section {
+    margin: 6rem 0; /* Reduce vertical margin */
+  }
+
+  .clients-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .clients-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .client-name {
+    font-size: 2rem; /* Smaller font size for client names */
+    margin-right: 1.5rem; /* Reduce spacing between names */
+  }
+}
+
+/* Additional optimization for very small screens */
+@media (max-width: 480px) {
+  .about-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 2rem;
+  }
+
+  .clients-list li,
+  .client-name {
+    font-size: 1.75rem;
   }
 }

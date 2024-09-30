@@ -10,12 +10,12 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
   // Remove the experiences array as it's no longer needed
 
   const approachItems = [
-    { title: "Shared ownership", description: "Whether I work independently or integrate with your team, everyone comes along the process." },
-    { title: "I work fast, I mean like <em>really</em> fast", description: "Quick iteration allows us to zoom through explorations until we arrive at something that feels just right." },
-    { title: "Show and tell", description: "I frequently share work in progress, usually in the form of screen recordings with a voice over." },
-    { title: "Bias for action", description: "I prefer creating tangible artifacts to visualize the team's ideas over lengthy documents that often go ignored." },
-    { title: "I work in systems", description: "Whether it's a small feature or an entire design system, I create reusable components for the team." },
-    { title: "Design is thinking", description: "I am not afraid to throw away an idea and explore divergent solutions. The more the merrier!" }
+    { title: "I work fast, I mean like <em>really</em> fast", description: "Quick iteration allows me to zoom through explorations until I arrive at something that feels just right." },
+    { title: "I care deeply about design", description: "For me, it's both how it works and how it looks. I ensure everyone is aligned on creating products that are functional, beautiful, and intuitive." },
+    { title: "I strongly believe in attention to detail", description: "I believe meticulous care and a design-centric approach are crucial for creating exceptional user experiences." },
+    { title: "I think in systems", description: "I develop reusable components for both small features and entire design systems, ensuring consistency and scalability." },
+    { title: "Visualization over documentation", description: "I create tangible artifacts to visualize ideas, favoring practical demonstrations over lengthy documents." },
+    { title: "Show and tell", description: "I regularly share work-in-progress, keeping stakeholders informed and involved throughout the design journey." }
   ];
 
   const testimonials = [
@@ -47,20 +47,20 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
 
   const faqQuestions = [
     {
-      question: "What is fractional design leadership?",
-      answer: "Fractional leadership is a flexible model where organizations engage part-time design leaders to drive and guide design strategies and initiatives. Fractional Design Leaders provide valuable insights, mentorship, and direction to enhance the overall design capabilities and outcomes of the organization, without the need for full-time employment."
+      question: "What is a Part-time Design Partnership?",
+      answer: "A Part-time Design Partnership is an innovative collaboration where companies engage with seasoned designers on a flexible basis to elevate their product vision. As your part-time design partner, I offer both strategic guidance and hands-on expertise, helping organizations bring their ideas to life efficiently. This model provides access to senior-level design talent without the commitment of a full-time hire, making it ideal for startups and growing companies looking to maximize their design impact."
     },
     {
-      question: "Why not to hire full-time product designer?",
-      answer: "Navigating the hiring process for a full-time designer can be really risky and time-consuming. A bad hire can have detrimental effects on company culture and founders don't always know how to identify the best designer for their long-term needs. Opting to work with me offers a flexible and lower-commitment solution, ideal for situations where time is of the essence and you need to quickly bring your ideas to life without the potential risks associated with a permanent hire. Additionally, as our partnership evolves, I can guide you in building your own dedicated design team, facilitating a seamless transition to capable hands that align with your long-term goals."
+      question: "Why consider a part-time design partner?",
+      answer: "Hiring a full-time senior designer can be challenging and risky for startups. As your part-time design partner, I offer a flexible, cost-effective alternative. You'll get senior-level expertise to quickly validate ideas and establish scalable design processes, without the long-term commitment. Drawing from my diverse industry experience, I'll help bring your ideas to life efficiently while guiding you in building your own design capabilities. It's a low-risk way to give your company a strong design edge and maximize impact."
     },
     {
       question: "What is your pricing structure?",
-      answer: "I focus on bringing exceptional expertise and product intuition with urgency and high craft. That's why I prefer to work with a flat weekly retainer. That way we can focus on the work without worrying about tracking hours, limited revisions, or rigidly defined scopes. We end when the work is done."
+      answer: "I keep things simple with a flat weekly rate. This means we can focus on getting great work done instead of watching the clock. No confusing hourly rates or nickel-and-diming over revisions. We'll work together to bring your ideas to life, and we're done when you're happy with the results."
     },
     {
       question: "What's your availability?",
-      answer: "I'm generally available every weekday through Slack and open to Zoom/in-person meetings on Tuesdays and Thursdays. I find it's best to agree on milestones for the week/month and then focus on delivering those in time, rather than worrying about tracking time."
+      answer: "I'm here when you need me. You can reach out any weekday, and I'm flexible for calls or meetings as needed. We'll set clear goals for what needs to get done each week or month, and I'll make sure to deliver on time. This setup means you get the benefits of a dedicated design partner without the full-time commitment. It's all about moving your project forward efficiently while giving you the space to focus on other aspects of your business."
     }
   ];
 
@@ -86,15 +86,17 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
             <img src={getImagePath('elina.png')} alt="Profile" />
           </div>
           <div className="about-text">
-            <h3>I help companies ship products fast without compromising quality.</h3>
-            <p>I've spent the last decade building products for tech companies. Today, I partner with founders to bring their ideas to life. As your design partner, I will:</p>
+            <h3>I help companies ship high-quality products, fast.</h3>
+            <p>As your design partner, I will:</p>
             <ul>
-              <li>Help you shape your product strategy without drowning in docs</li>
-              <li>Quickly create high-fidelity interactive prototypes to validate ideas</li>
-              <li>Collaborate directly with engineering teams to iterate swiftly</li>
-              <li>Build and nurture a design team that's set up for success</li>
+              <li>Contribute to product strategy and direction, focusing on actionable insights rather than excessive documentation</li>
+              <li>Create rapid, high-fidelity interactive prototypes to test and validate ideas efficiently</li>
+              <li>Lead end-to-end design projects, collaborating closely with engineering teams for swift iteration and high-quality implementation</li>
+              <li>Come up with features and improvements that ship quickly and with high-quality</li>
+              <li>Build and nurture a successful design team within your company</li>
+              <li>Establish design-centric processes that promote attention to detail and quality</li>
             </ul>
-            <a href="/path/to/resume" className="view-resume">View resume →</a>
+            <a href="https://www.linkedin.com/in/elinapatjas/" className="view-resume">View resume →</a>
           </div>
         </div>
       </section>
@@ -115,7 +117,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
       </section>
 
       <Testimonials 
-        title="What the say"
+        title="What they say"
         testimonials={testimonials}
       />
 

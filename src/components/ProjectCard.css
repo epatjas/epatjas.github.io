@@ -19,13 +19,13 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 32px 32px; /* This sets both row and column gap. Adjust as needed */
 }
 
 .project-card {
   background-color: transparent;
-  border-radius: 15px;
   overflow: hidden;
+  margin-bottom: 40px; /* Adds space between rows */
 }
 
 .project-card img {
@@ -34,16 +34,21 @@
   display: block;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  margin: 20px 20px 0px 0px; 
+.project-card__info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Adds whitespace above the title and client */
 }
 
-.project-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #CCCCCC;
-  margin: 20px 20px 0px 0px; 
+.project-card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.project-card__client {
+  font-size: 1.25rem;
+  color: #888888; 
 }
 
 @media (max-width: 1024px) {

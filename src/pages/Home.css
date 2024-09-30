@@ -1,7 +1,7 @@
 .home-page {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 0 1.25rem; /* This is 20px, we'll adjust it for mobile */
 }
 
 .hero {
@@ -44,17 +44,24 @@ h2 {
 .about-content {
     display: flex;
     justify-content: space-between;
-    gap: 8rem;
+    gap: 4rem;
     margin-top: 2rem;
 }
 
-.about-text, .skills {
-    flex: 1;
-    width: 50%; /* Ensure both columns take up equal width */
+.about-text {
+    flex: 3;
+    width: 60%;
+    max-width: 60%; 
+}
+
+.skills {
+    flex: 2;
+    width: 40%;
+    max-width: 40%; 
 }
 
 .about-text p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -147,5 +154,79 @@ h2 {
     z-index: 2;
     background-color: var(--color-background);
     padding-right: 1.25rem;
+}
+
+
+@media (max-width: 48rem) {
+    .home-page {
+        padding: 0 16px; 
+    }
+
+    .hero {
+        margin-top: 7.5rem; 
+        margin-bottom: 3rem; 
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem; 
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .about {
+        margin-bottom: 3rem; 
+    }
+
+    .about h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem; 
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 2rem; /* Reduced from previous value */
+        margin-top: 1rem; /* Reduced from 1.5rem or 2rem */
+    }
+
+    .about-text, .skills {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        margin-bottom: 1rem; /* Reduced from 1.5rem */
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 0; /* Remove bottom margin from last paragraph */
+    }
+
+    .skills {
+        margin-top: 1rem; /* Add some top margin to the skills section */
+    }
+
+    .skills h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .skills-tags {
+        gap: 0.75rem; /* Reduced from 0.75rem */
+    }
+
+    .skills-tags span {
+        font-size: 0.9rem; /* Smaller font size for skill tags */
+        padding: 0.4rem 0.8rem; /* Slightly reduced padding */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
 }
 

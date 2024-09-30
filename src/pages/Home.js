@@ -26,8 +26,8 @@ function Home() {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>I'm an experienced full-stack product designer working on various projects on a wide range of clients. My unique skillset has helped me to manage extremely complex products and deliver outstanding results.</p>
-              <p>I view things holistically and am able to think of a system as a whole. I know how to take responsibility for design decisions and am able to articulate them clearly.</p>
+              <p>I'm an experienced full-stack product designer who partners with companies as a part-time design leader. I bring ideas to life by managing complex products and delivering outstanding results across diverse projects.</p>
+              <p>In my role, I provide high-level strategic guidance while also executing top-quality UX/UI design work. I offer the vision and decision-making of an executive-level designer, combined with the ability to produce polished, user-focused interfaces. This unique blend allows companies to benefit from both strategic leadership and hands-on design expertise, tailored to their specific needs and growth stage.</p>
             </div>
             <div className="skills">
               <h3>Your one stop shop for:</h3>

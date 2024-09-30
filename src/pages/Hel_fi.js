@@ -26,7 +26,7 @@ function Hel_fi() {
       },
       {
         title: "Easier access to decision making",
-        image: getImagePath('decision-makingproject.png'),
+        image: getImagePath('decision-making-project.png'),
         description: "Our aim was to help citizens keep abreast of how Helsinki is changing and to make it easier to understand the decision-making processes. We were focusing on making a service where finding and reviewing things quickly is as intuitive as possible."
       }
     ]
