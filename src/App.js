@@ -13,7 +13,7 @@ import './GlobalStyles.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/pofo">
       <AppContent />
     </Router>
   );

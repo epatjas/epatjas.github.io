@@ -115,7 +115,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
       </section>
 
       <Testimonials 
-        title="Don't take my word for it"
+        title="What the say"
         testimonials={testimonials}
       />
 
