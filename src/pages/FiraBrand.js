@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
@@ -8,6 +8,10 @@ import './FiraBrand.css';
 import { getImagePath } from '../utils/imageUtils';
 
 function FiraBrand() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="light-background">
       <Header isLight={false} /> {/* Changed to false for dark variant */}

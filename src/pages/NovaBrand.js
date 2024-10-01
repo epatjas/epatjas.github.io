@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
@@ -8,6 +8,10 @@ import './NovaBrand.css';
 import { getImagePath } from '../utils/imageUtils';
 
 function NovaBrand() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="nova-brand-page light-background">
       {/* Remove this line: <Header isLight={true} /> */}

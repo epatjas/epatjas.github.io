@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
@@ -10,6 +10,10 @@ import CaseStudySection from '../components/CaseStudySection';
 import { getImagePath } from '../utils/imageUtils';
 
 function Hel_fi() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projectsData = {
     title: "Selected projects",
     subtitle: "Few examples of different projects I did during hel.fi renewal",

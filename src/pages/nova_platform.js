@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
 import CaseStudySection from '../components/CaseStudySection';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
@@ -8,7 +8,11 @@ import { CaseStudyVideo } from '../components/CaseStudyVideo';
 import { CaseStudySteps } from '../components/CaseStudySteps';
 import './nova_platform.css';
 
-const nova_platform = () => {
+const NovaPlatform = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const approachStyles = {
     '--approach-background': '#F9FBFD',
     '--step-background': '#E8EDF7',
@@ -192,4 +196,4 @@ const nova_platform = () => {
   );
 };
 
-export default nova_platform;
+export default NovaPlatform;

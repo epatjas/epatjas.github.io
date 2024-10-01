@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
 import CaseStudySection from '../components/CaseStudySection';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
@@ -7,6 +7,10 @@ import { getImagePath } from '../utils/imageUtils';
 import './Nova_ai.css';
 
 const NovaAI = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="case-study-nova-ai">
       <div className="container">
