@@ -26,8 +26,8 @@
 }
 
 .callToAction {
-  background-color: #1a1a1a;
-  border: 1px solid #262626;
+  background-color: var(--callToAction-bg, #1a1a1a);
+  border: 1px solid var(--callToAction-border, #262626);
   padding: 2rem;
   border-radius: 1rem;
   max-width: 40%;
@@ -39,7 +39,8 @@
 }
 
 .callToAction p {
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
@@ -69,6 +70,15 @@
   font-size: 1rem;
   margin: 0;
   opacity: 0.7;
+}
+
+.footer.light-theme {
+  --callToAction-bg: #F9FBFD;
+  --callToAction-border: #E9EFF6;
+}
+
+.footer.light-theme .callToAction {
+  color: #333; /* Adjust text color for better contrast in light theme */
 }
 
 @media (max-width: 1440px) {

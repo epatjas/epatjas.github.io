@@ -1,0 +1,60 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    /* Remove this line: overflow: hidden; */
+  }
+  
+  .full-width-image {
+    width: 100%;
+    margin-top: 24px; 
+  }
+  
+  .full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.image-column {
+  flex: 0 0 32%; /* Adjust this value to control the width of each image */
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+  }
+
+  .image-column {
+    flex: 0 0 100%;
+    margin-bottom: 16px;
+  }
+
+  .image-column:last-child {
+    margin-bottom: 0;
+  }
+}

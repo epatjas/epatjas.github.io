@@ -1,32 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Footer from '../components/Footer'; 
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import './About.css';
 import { getImagePath } from '../utils/imageUtils';
 
-const About = () => {  // Changed from 'function About()' to 'const About = () =>'
+const About = () => {
+  const location = useLocation();
+  const faqRef = useRef(null);
+
+  useEffect(() => {
+    if (location.hash === '#faq' && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
+
   // Remove the experiences array as it's no longer needed
 
   const approachItems = [
     { title: "I work fast, I mean like <em>really</em> fast", description: "Quick iteration allows me to zoom through explorations until I arrive at something that feels just right." },
-    { title: "I care deeply about design", description: "For me, it's both how it works and how it looks. I ensure everyone is aligned on creating products that are functional, beautiful, and intuitive." },
-    { title: "I strongly believe in attention to detail", description: "I believe meticulous care and a design-centric approach are crucial for creating exceptional user experiences." },
+    { title: "Master at taming the chaos", description: "I have the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems." },
+    { title: "I don't ship junk. Ever.", description: "I believe meticulous care and a design-centric approach are crucial for creating exceptional user experiences." },
     { title: "I think in systems", description: "I develop reusable components for both small features and entire design systems, ensuring consistency and scalability." },
-    { title: "Visualization over documentation", description: "I create tangible artifacts to visualize ideas, favoring practical demonstrations over lengthy documents." },
+    { title: "I work with little to no direction", description: "I thrive in ambiguity, turning vague concepts into tangible solutions without needing constant guidance." },
     { title: "Show and tell", description: "I regularly share work-in-progress, keeping stakeholders informed and involved throughout the design journey." }
   ];
 
   const testimonials = [
     {
-      quote: "Elina is a master at taming the chaos. She has the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems. She is proactive, works with little to no direction — and she's also very fast!",
-      author: "Anna Hallikainen",
-      position: "Development Director, Otava Learning",
-      avatar: getImagePath('anna.png')
-    },
-    {
-      quote: "I cannot recommend Elina enough. Truly world-class in every sense of the word. From helping to visualize an ambitious product story & vision, to playing an active role in bringing on senior full-time talent, and everything in between - Elina can seemingly do it all. Our product, team, culture, and customers are in a stronger position thanks to our time together.",
+      quote: "I cannot recommend Elina enough. Truly world-class in every sense of the word. From helping to visualize an ambitious product story & vision, to playing an active role in bringing on senior full-time talent, and everything in between - Elina can seemingly do it all. Our client's product, team, culture, and customers are in a stronger position thanks to our time together.",
       author: "Rami Ertimo",
       position: "Front End Architect, Asteroid",
       avatar: getImagePath('rami.png')
@@ -42,16 +45,22 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
       author: "Anni Leppänen",
       position: "Lead Service Designer, City of Helsinki",
       avatar: getImagePath('anni.png')
+    },
+    {
+      quote: "Elina is a master at taming the chaos. She has the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems. She is proactive, works with little to no direction — and she's also very fast!",
+      author: "Anna Hallikainen",
+      position: "Development Director, Otava Learning",
+      avatar: getImagePath('anna.png')
     }
   ];
 
   const faqQuestions = [
     {
-      question: "What is a Part-time Design Partnership?",
-      answer: "A Part-time Design Partnership is an innovative collaboration where companies engage with seasoned designers on a flexible basis to elevate their product vision. As your part-time design partner, I offer both strategic guidance and hands-on expertise, helping organizations bring their ideas to life efficiently. This model provides access to senior-level design talent without the commitment of a full-time hire, making it ideal for startups and growing companies looking to maximize their design impact."
+      question: "What is a Fractional Design Partner?",
+      answer: "A Fractional Design Partner is an innovative collaboration where companies engage with seasoned designers on a flexible basis to elevate their product vision. As your part-time design partner, I offer both strategic guidance and hands-on expertise, helping organizations bring their ideas to life efficiently. This model provides access to senior-level design talent without the commitment of a full-time hire, making it ideal for startups and growing companies looking to maximize their design impact."
     },
     {
-      question: "Why consider a part-time design partner?",
+      question: "What are the benefits of a Fractional Design Partner?",
       answer: "Hiring a full-time senior designer can be challenging and risky for startups. As your part-time design partner, I offer a flexible, cost-effective alternative. You'll get senior-level expertise to quickly validate ideas and establish scalable design processes, without the long-term commitment. Drawing from my diverse industry experience, I'll help bring your ideas to life efficiently while guiding you in building your own design capabilities. It's a low-risk way to give your company a strong design edge and maximize impact."
     },
     {
@@ -133,7 +142,7 @@ const About = () => {  // Changed from 'function About()' to 'const About = () =
         </div>
       </section>
 
-      <FAQ questions={faqQuestions} />
+      <FAQ questions={faqQuestions} ref={faqRef} />
     </div>
   );
 };

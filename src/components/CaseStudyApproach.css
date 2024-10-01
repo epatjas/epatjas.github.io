@@ -1,5 +1,11 @@
+:root {
+  --approach-background: #E6F0FF;
+  --step-background: #C7DCFF;
+  --step-number-color: #0000FF;
+}
+
 .case-study-approach {
-  background-color: #E6F0FF;
+  background-color: var(--approach-background);
   padding: 80px 40px;
   margin: 24px 0;
   border-radius: 20px;
@@ -40,18 +46,18 @@
 }
 
 .approach-steps {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
 .approach-step {
-  flex: 1;
   position: relative;
 }
 
 .step-number {
-  background-color: #C7DCFF;
-  color: #0000FF;
+  background-color: var(--step-background);
+  color: var(--step-number-color);
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -73,6 +79,12 @@
   color: #333;
 }
 
+@media (max-width: 1024px) {
+  .approach-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .case-study-approach {
     padding: 24px 16px;
@@ -83,6 +95,6 @@
   }
 
   .approach-steps {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }

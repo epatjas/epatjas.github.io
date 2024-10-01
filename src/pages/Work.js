@@ -14,12 +14,14 @@ const projects = [
   {
     image: getImagePath('platform.png'),
     project: 'Online Learning Platform',
-    client: 'Otava Learning'
+    client: 'Otava Learning',
+    link: '/work/nova_platform'
   },
   {
     image: getImagePath('nova ai.png'),
     project: 'Nova AI',
-    client: 'Otava Learning'
+    client: 'Otava Learning',
+    link: '/work/Nova_ai'
   },
   {
     image: getImagePath('Fira.png'),

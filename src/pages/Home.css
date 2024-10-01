@@ -1,7 +1,7 @@
 .home-page {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1.25rem; /* This is 20px, we'll adjust it for mobile */
+    
 }
 
 .hero {

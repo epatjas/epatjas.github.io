@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import './FAQ.css';
 
-function FAQ({ questions }) {
+const FAQ = forwardRef(({ questions }, ref) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleQuestion = (index) => {
@@ -9,7 +9,7 @@ function FAQ({ questions }) {
   };
 
   return (
-    <section className="faq-section">
+    <section ref={ref} className="faq-section">
       <h2 className="faq-title">Frequently asked questions</h2>
       <div className="faq-content">
         <div className="faq-list">
@@ -32,6 +32,6 @@ function FAQ({ questions }) {
       </div>
     </section>
   );
-}
+});
 
 export default FAQ;

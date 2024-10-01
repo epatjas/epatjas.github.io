@@ -15,33 +15,10 @@ function Home() {
 
   return (
     <div className="home-page dark-theme">
-      {/* Remove this line: <Header /> */}
       <main>
         <section className="hero">
           <h1>I'm a Principal Product Designer with 15+ years of experience in crafting high-quality designs, interactions, and products.</h1>
           <p>I strongly believe that attention to detail and a design-centric approach are at the core of creating exceptional user experiences</p>
-        </section>
-
-        <section className="about">
-          <h2>About Me</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p>I'm an experienced full-stack product designer who partners with companies as a part-time design leader. I bring ideas to life by managing complex products and delivering outstanding results across diverse projects.</p>
-              <p>In my role, I provide high-level strategic guidance while also executing top-quality UX/UI design work. I offer the vision and decision-making of an executive-level designer, combined with the ability to produce polished, user-focused interfaces. This unique blend allows companies to benefit from both strategic leadership and hands-on design expertise, tailored to their specific needs and growth stage.</p>
-            </div>
-            <div className="skills">
-              <h3>Your one stop shop for:</h3>
-              <div className="skills-tags">
-                <span>User interface design</span>
-                <span>Interaction design</span>
-                <span>User experience design</span>
-                <span>Front-end dev</span>
-                <span>Branding</span>
-                <span>Identity</span>
-                <span>Product Strategy</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section className="highlighted-projects">
@@ -60,6 +37,28 @@ function Home() {
                 isLight={false}
               />
             ))}
+          </div>
+        </section>
+
+        <section className="about">
+          <h2>About Me</h2>
+          <div className="about-content">
+            <div className="about-text">
+              <p>I'm a <Link to="/about#faq">Fractional Design Partner</Link>. I bring product strategy and hands-on UX/UI design to companies ready to scale. I blend big-picture thinking with practical execution, bridging the gap between concept and shipped product efficiently.</p>
+              <p>My expertise spans creative and technical realms, enabling me to align teams and shape clear product visions. I adapt to your company's needs, whether you're a startup or scaling up, delivering high-impact results without the overhead of a full-time hire.</p>
+            </div>
+            <div className="skills">
+              <h3>Your one stop shop for:</h3>
+              <div className="skills-tags">
+                <span>User interface design</span>
+                <span>Interaction design</span>
+                <span>User experience design</span>
+                <span>Concepting</span>
+                <span>Branding</span>
+                <span>Identity</span>
+                <span>Product Strategy</span>
+              </div>
+            </div>
           </div>
         </section>
 

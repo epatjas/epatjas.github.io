@@ -22,8 +22,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px; /* Default max-width for non-case study pages */
-    margin: 0 auto; /* Center the content */
+    max-width: 1400px; 
+    margin: 0 auto; 
     width: 100%;
 }
 

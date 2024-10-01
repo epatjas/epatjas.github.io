@@ -9,6 +9,8 @@ import Hel_fi from './pages/Hel_fi';
 import FiraBrand from './pages/FiraBrand';
 import Work from './pages/Work';
 import About from './pages/About';
+import NovaAI from './pages/Nova_ai'; 
+import NovaPlatform from './pages/nova_platform'; 
 import './GlobalStyles.css';
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const isLightTheme = ['/work', '/work/NovaBrand', '/work/Hel_fi', '/work/FiraBrand'].includes(location.pathname);
+  const isLightTheme = ['/work', '/work/NovaBrand', '/work/Hel_fi', '/work/FiraBrand', '/work/Nova_ai', '/work/nova_platform'].includes(location.pathname);
 
   React.useEffect(() => {
     document.body.className = isLightTheme ? 'light-theme' : 'dark-theme';
@@ -38,6 +40,8 @@ function AppContent() {
           <Route path="/work/NovaBrand" element={<NovaBrand />} />
           <Route path="/work/Hel_fi" element={<Hel_fi />} />
           <Route path="/work/FiraBrand" element={<FiraBrand />} />
+          <Route path="/work/Nova_ai" element={<NovaAI />} />
+          <Route path="/work/nova_platform" element={<NovaPlatform />} />
         </Routes>
       </main>
       <Footer currentPath={location.pathname} isLight={isLightTheme} />

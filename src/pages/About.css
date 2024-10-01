@@ -2,7 +2,6 @@
 .about-page {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
   color: #ffffff;
 }
 
@@ -344,7 +343,7 @@
   }
 
   .about-text h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .clients-list li,
