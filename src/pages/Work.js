@@ -38,7 +38,8 @@ const projects = [
   {
     image: getImagePath('Coding company.png'),
     project: 'Coding Company Brand',
-    client: 'Coding Company'
+    client: 'Coding Company',
+    link: '/work/CodingCompany'
   },
   // ... Add more projects as needed
 ];

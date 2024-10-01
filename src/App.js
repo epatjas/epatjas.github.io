@@ -11,6 +11,7 @@ import Work from './pages/Work';
 import About from './pages/About';
 import NovaAI from './pages/Nova_ai'; 
 import NovaPlatform from './pages/nova_platform'; 
+import CodingCompany from './pages/CodingCompany';
 import './GlobalStyles.css';
 
 function App() {
@@ -42,6 +43,7 @@ function AppContent() {
           <Route path="/work/FiraBrand" element={<FiraBrand />} />
           <Route path="/work/Nova_ai" element={<NovaAI />} />
           <Route path="/work/nova_platform" element={<NovaPlatform />} />
+          <Route path="/work/CodingCompany" element={<CodingCompany />} />
         </Routes>
       </main>
       <Footer currentPath={location.pathname} isLight={isLightTheme} />

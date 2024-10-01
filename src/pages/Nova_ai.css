@@ -20,38 +20,40 @@
     display: block;
   }
 
-  @media (max-width: 768px) {
-    .container {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-  }
-
 .image-row {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
   margin-bottom: 24px;
+  gap: 10px; /* Reduced gap between images */
 }
 
 .image-column {
-  flex: 0 0 32%; /* Adjust this value to control the width of each image */
+  flex: 1 1 0; /* grow | shrink | basis */
+  max-width: calc(33.333% - 7px); /* Adjust based on the gap */
 }
 
 .image-column img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 @media (max-width: 768px) {
+
+        .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
   .image-row {
     flex-direction: column;
+    gap: 20px;
   }
 
   .image-column {
-    flex: 0 0 100%;
-    margin-bottom: 16px;
+    max-width: 100%;
   }
 
   .image-column:last-child {
