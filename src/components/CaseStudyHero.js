@@ -3,19 +3,30 @@ import './CaseStudyHero.css';
 
 export function CaseStudyHero({ title, subtitle, services, client, year }) {
   const titleRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const resizeTitle = () => {
       const titleElement = titleRef.current;
-      if (!titleElement) return;
+      const containerElement = containerRef.current;
+      if (!titleElement || !containerElement) return;
 
-      const containerWidth = titleElement.offsetWidth;
-      let fontSize = 320; // Starting with a larger size (20rem assuming 16px base font size)
+      const containerWidth = containerElement.offsetWidth;
+      const containerHeight = containerElement.offsetHeight;
+      let fontSize = 320; // Starting with a larger size
       titleElement.style.fontSize = `${fontSize}px`;
 
-      while (titleElement.scrollWidth > containerWidth && fontSize > 80) {
+      while ((titleElement.scrollWidth > containerWidth || titleElement.scrollHeight > containerHeight) && fontSize > 20) {
         fontSize -= 2;
         titleElement.style.fontSize = `${fontSize}px`;
+      }
+
+      // Ensure the title doesn't become too small
+      if (fontSize <= 20) {
+        titleElement.style.fontSize = '20px';
+        titleElement.style.whiteSpace = 'normal';
+      } else {
+        titleElement.style.whiteSpace = 'nowrap';
       }
     };
 
@@ -28,7 +39,7 @@ export function CaseStudyHero({ title, subtitle, services, client, year }) {
   return (
     <div className="case-study-hero">
       <div className="case-study-hero-content">
-        <div className="case-study-title-container">
+        <div className="case-study-title-container" ref={containerRef}>
           <h1 className="case-study-title" ref={titleRef}>{title}</h1>
         </div>
         <div className="case-study-intro">

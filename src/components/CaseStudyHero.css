@@ -16,10 +16,14 @@
   width: 100%;
   max-width: 1200px;
   overflow: hidden;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 150px; /* Ensure minimum height */
+  display: flex;
+  align-items: center;
 }
 
 .case-study-title {
-  font-size: 20rem; 
+  font-size: 20rem; /* This will be overridden by JS */
   font-weight: normal;
   line-height: 1;
   white-space: nowrap;
@@ -28,7 +32,6 @@
   width: 100%;
   text-align: left;
 }
-
 
 .case-study-intro {
   display: flex;
@@ -117,15 +120,12 @@
   }
 
   .case-study-title-container {
-    overflow: hidden; /* Keep the overflow hidden */
-    width: 100%; /* Ensure full width */
+    min-height: 100px; /* Adjust for mobile */
   }
 
   .case-study-title {
-    /* The font size will be handled by JavaScript */
-    white-space: nowrap; /* Keep it on one line */
-    line-height: 1;
-    transform-origin: left top; /* Scale from the top left corner */
+    /* Font size will be handled by JavaScript */
+    white-space: normal; /* Allow wrapping on mobile if needed */
   }
 
   .case-study-intro {
@@ -176,6 +176,10 @@
 @media (max-width: 480px) {
   .case-study-header {
     padding-top: 40px;
+  }
+
+  .case-study-title-container {
+    min-height: 80px; /* Further adjust for smaller screens */
   }
 
   .case-study-subtitle {
