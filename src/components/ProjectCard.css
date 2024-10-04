@@ -1,0 +1,72 @@
+.selected-projects {
+  background-color: var(--color-background);
+  color: #FFFFFF;
+  padding: 16px 40px 80px 40px;
+  border-radius: 20px;
+}
+
+.selected-projects h2 {
+  font-size: 3rem;
+  margin-bottom: 4px;
+}
+
+.projects-subtitle {
+  font-size: 1.2rem;
+  color: #CCCCCC;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 32px; /* This sets both row and column gap. Adjust as needed */
+}
+
+.project-card {
+  background-color: transparent;
+  overflow: hidden;
+  margin-bottom: 40px; /* Adds space between rows */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card__info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Adds whitespace above the title and client */
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.project-card__client {
+  font-size: 1.25rem;
+  color: #888888; 
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .selected-projects {
+    padding: 60px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-projects h2 {
+    font-size: 2.5rem;
+  }
+}

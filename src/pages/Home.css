@@ -1,0 +1,232 @@
+.home-page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    
+}
+
+.hero {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    max-width: 56.25rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    max-width: 37.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.about {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-background);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 3;
+    width: 60%;
+    max-width: 60%; 
+}
+
+.skills {
+    flex: 2;
+    width: 40%;
+    max-width: 40%; 
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.skills h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skills-tags span {
+    background-color: #1A1A1A;
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    white-space: nowrap;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.75rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 48rem) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.highlighted-projects {
+    position: relative;
+    margin-bottom: 3.75rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem; /* Adjust as needed */
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.see-all-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.see-all-link:hover {
+    opacity: 0.7;
+}
+
+.highlighted-projects h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 1.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-background);
+    padding-right: 1.25rem;
+}
+
+
+.testimonials {
+    position: relative;
+    margin-bottom: 3.75rem;
+}
+
+.testimonials h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 1.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-background);
+    padding-right: 1.25rem;
+}
+
+
+@media (max-width: 48rem) {
+    .home-page {
+        padding: 0 16px; 
+    }
+
+    .hero {
+        margin-top: 7.5rem; 
+        margin-bottom: 3rem; 
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem; 
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .about {
+        margin-bottom: 3rem; 
+    }
+
+    .about h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem; 
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 2rem; /* Reduced from previous value */
+        margin-top: 1rem; /* Reduced from 1.5rem or 2rem */
+    }
+
+    .about-text, .skills {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        margin-bottom: 1rem; /* Reduced from 1.5rem */
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 0; /* Remove bottom margin from last paragraph */
+    }
+
+    .skills {
+        margin-top: 1rem; /* Add some top margin to the skills section */
+    }
+
+    .skills h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .skills-tags {
+        gap: 0.75rem; /* Reduced from 0.75rem */
+    }
+
+    .skills-tags span {
+        font-size: 0.9rem; /* Smaller font size for skill tags */
+        padding: 0.4rem 0.8rem; /* Slightly reduced padding */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+}
+

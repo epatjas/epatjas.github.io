@@ -1,0 +1,62 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    /* Remove this line: overflow: hidden; */
+  }
+  
+  .full-width-image {
+    width: 100%;
+    margin-top: 24px; 
+  }
+  
+  .full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  gap: 10px; /* Reduced gap between images */
+}
+
+.image-column {
+  flex: 1 1 0; /* grow | shrink | basis */
+  max-width: calc(33.333% - 7px); /* Adjust based on the gap */
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+@media (max-width: 768px) {
+
+        .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-column {
+    max-width: 100%;
+  }
+
+  .image-column:last-child {
+    margin-bottom: 0;
+  }
+}

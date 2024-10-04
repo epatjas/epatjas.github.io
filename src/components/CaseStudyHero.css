@@ -1,0 +1,194 @@
+.case-study-header {
+  margin-bottom: 60px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px; 
+  box-sizing: border-box;
+}
+
+.case-study-title-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.case-study-title {
+  font-size: 20rem; 
+  font-weight: normal;
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+
+.case-study-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin-top: 40px;
+}
+
+.case-study-subtitle {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: black;
+  max-width: 50%;
+  margin: 0;  
+}
+
+.case-study-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+
+.case-study-detail {
+  display: flex;
+  align-items: flex-start; /* Changed back to flex-start */
+}
+
+.case-study-detail h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0;
+  width: 120px;
+  flex-shrink: 0;
+  padding-right: 20px;
+  text-align: left;
+  padding-top: 4px; /* Align with the top of the pills */
+}
+
+.case-study-detail p {
+  font-size: 1rem;
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.case-study-detail.services p {
+  gap: 4px;
+}
+
+.case-study-detail.client,
+.case-study-detail.year {
+  align-items: center; /* Center align for client and year */
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #fff;
+  border: 1px solid #D4DAE6;
+  border-radius: 24px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.case-study-detail.services p::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.case-study-detail.services p {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@media (max-width: 768px) {
+  .case-study-header {
+    margin-bottom: 40px;
+    padding: 60px 16px 0; /* Adjust top padding and set left/right to 16px */
+  }
+
+  .case-study-title-container {
+    overflow: hidden; /* Keep the overflow hidden */
+    width: 100%; /* Ensure full width */
+  }
+
+  .case-study-title {
+    /* The font size will be handled by JavaScript */
+    white-space: nowrap; /* Keep it on one line */
+    line-height: 1;
+    transform-origin: left top; /* Scale from the top left corner */
+  }
+
+  .case-study-intro {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .case-study-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .case-study-details {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .case-study-detail {
+    flex-direction: row; /* Keep the layout horizontal */
+    align-items: flex-start;
+    gap: 15px; /* Add gap between label and content for mobile */
+  }
+
+  .case-study-detail h3 {
+    width: 90px; /* Adjusted width for mobile */
+    padding-right: 0;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  .case-study-detail p {
+    font-size: 0.9rem;
+  }
+
+  .case-study-detail.services p {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pill {
+    padding: 2px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-header {
+    padding-top: 40px;
+  }
+
+  .case-study-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .case-study-detail h3 {
+    width: 80px; /* Further reduce width for very small screens */
+    font-size: 0.75rem;
+  }
+
+  .case-study-detail p,
+  .pill {
+    font-size: 0.85rem;
+  }
+}

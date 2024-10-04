@@ -1,0 +1,80 @@
+.workPage {
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  ;
+}
+
+.work-content {
+  flex: 1;
+  padding: 80px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.work-title {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-top: 40px; /* Add margin-top */
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Add gap between grid items */
+  margin-top: 40px;
+}
+
+.workPage a {
+  color: var(--color-text-light);
+}
+
+.workPage a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-content {
+    padding: 60px 16px; /* Adjust padding for mobile */
+  }
+
+  .work-title {
+    font-size: 3rem; /* Reduce font size for mobile */
+    margin-top: 128px; /* Reduce margin-top for mobile */
+    margin-bottom: 30px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 16px; /* Reduce gap for mobile */
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-content {
+    padding: 40px 16px; /* Further reduce padding for smaller devices */
+  }
+
+  .work-title {
+    font-size: 3rem; /* Further reduce font size for smaller devices */
+    margin-top: 64px; /* Further reduce margin-top for smaller devices */
+    margin-bottom: 20px;
+  }
+
+  .project-grid {
+    gap: 12px; /* Further reduce gap for smaller devices */
+    margin-top: 20px;
+  }
+}

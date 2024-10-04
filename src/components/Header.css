@@ -1,0 +1,171 @@
+.header-dark {
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.header-light {
+    background-color: transparent;
+    color: var(--color-text-light);
+}
+
+.header {
+    padding: 10px 40px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.logo {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-text);
+    margin-top: 5px; 
+}
+
+.header-dark .logo,
+.header-dark nav a {
+    color: var(--color-text);
+}
+
+.header-light .logo,
+.header-light nav a {
+    color: var(--color-text-light);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a.active {
+    position: relative;
+}
+
+nav a.active::after {
+    content: '•';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.case-study-header {
+    position: fixed;
+    right: 20px;
+    left: 20px; /* Add left positioning */
+    z-index: 1000;
+}
+
+.close-button {
+    background-color: rgba(200, 200, 200, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Add some space between logo and button */
+    margin-top: 5px; /* Add a small top margin if needed */
+}
+
+.close-button:hover {
+    background-color: rgba(180, 180, 180, 0.9);
+}
+
+.close-button svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.case-study-header .header-content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ensure the logo stays on the left even in case study pages */
+.case-study-header .logo {
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .case-study-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+  }
+  
+  .case-study-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .case-study-header .logo {
+    margin-right: auto;
+  }
+  
+  .close-button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-header {
+    padding: 8px 16px;
+  }
+  
+  .case-study-header .logo {
+    font-size: 1.125rem; /* Further reduced font size for very small screens */
+  }
+  
+  .close-button {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .close-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}

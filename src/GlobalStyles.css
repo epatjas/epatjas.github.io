@@ -1,0 +1,177 @@
+:root {
+  /* Color tokens */
+  --color-background-dark: hsl(210, 11%, 4%);
+  --color-text-light: hsl(235, 62%, 96%);
+  --color-text-secondary: hsl(0, 0%, 60%);
+  --font-main: 'Inter', sans-serif;
+  --max-width: 1400px; 
+
+  /* Light theme colors */
+  --color-background-light: hsl(0, 0%, 100%);
+  --color-text-dark: hsl(210, 11%, 4%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset default styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+/* Reset headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+}
+
+/* Reset lists */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set dark background for the entire page */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+}
+
+body.dark-theme {
+  background-color: var(--color-background-dark, #000000);
+  color: var(--color-text-light, #ffffff);
+}
+
+body.light-theme {
+  background-color: var(--color-background-light, #ffffff);
+  color: var(--color-text-dark, #000000);
+}
+
+.app-wrapper {
+  min-height: 100vh;
+}
+
+/* Ensure the root div takes up full height */
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-regular);
+}
+
+a {
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: none; 
+}
+
+/* Dark background for Home and About pages */
+.home-page {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page > * {
+  width: 100%;
+  max-width: var(--max-width, 1400px);
+  box-sizing: border-box;
+}
+
+/* Ensure full-width sections extend to the edges */
+.home-page > section {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.home-page > section > * {
+  max-width: var(--max-width, 1400px);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure links in dark background are visible */
+.home-page a, .about-page a {
+  color: var(--color-text-light);
+}
+
+/* Light background for other pages */
+.light-background {
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+}
+
+/* Ensure links in light background are visible */
+.light-background a {
+  color: var(--color-text-dark);
+}
+
+/* Keep your existing styles for .home-page and .dark-theme */
+.home-page.dark-theme {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+}
+
+/* You may need to adjust other elements to ensure they don't have a white background */
+
+.light-background, .light-theme {
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+}
+
+.light-background a, .light-theme a {
+  color: var(--color-text-dark);
+}
+
+/* You might need more specific styles for other elements */
+
+.dark-theme .header {
+  /* Styles for light header on dark theme */
+  color: var(--color-text-light, #ffffff);
+}
+
+.light-theme .header {
+  /* Styles for dark header on light theme */
+  color: var(--color-text-dark, #000000);
+}
+
+/* Add any other specific theme styles */

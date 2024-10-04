@@ -1,0 +1,128 @@
+.footer {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  padding: 4rem 2rem 2rem;
+}
+
+.footerContent,
+.footerBottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.quote {
+  font-size: 2.5rem;
+  font-weight: 500;
+  max-width: 50%;
+  line-height: 1.2;
+}
+
+.callToAction {
+  background-color: var(--callToAction-bg, #1a1a1a);
+  border: 1px solid var(--callToAction-border, #262626);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 40%;
+}
+
+.callToAction h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.callToAction p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+}
+
+.footerNav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.footerNav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.footer.light-theme {
+  --callToAction-bg: #F9FBFD;
+  --callToAction-border: #E9EFF6;
+}
+
+.footer.light-theme .callToAction {
+  color: #333; /* Adjust text color for better contrast in light theme */
+}
+
+@media (max-width: 1440px) {
+  .footerContent,
+  .footerBottom {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .quote, .callToAction {
+    max-width: 100%;
+  }
+
+  .quote {
+    font-size: 2rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .callToAction h3 {
+    font-size: 1.25rem;
+  }
+
+  .callToAction p, .footerNav a, .copyright {
+    font-size: 0.9rem;
+  }
+}

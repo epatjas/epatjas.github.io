@@ -1,0 +1,55 @@
+.case-study-paragraph {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.title-column {
+  flex: 0 0 33.333%; /* Adjust this value to change the width of the left column */
+}
+
+.content-column {
+  flex: 1;
+}
+
+.case-study-paragraph h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.case-study-paragraph p {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.cta-button-container {
+  margin-top: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #1C1C1C;
+  color: white!important;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 300 !important;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .case-study-paragraph {
+    flex-direction: column;
+  }
+
+  .title-column, .content-column {
+    flex: 1 1 100%;
+  }
+}

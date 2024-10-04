@@ -1,0 +1,25 @@
+.work-in-progress-banner {
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 120px 0;
+  text-align: center;
+}
+
+.work-in-progress-banner p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.placeholder-image {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.placeholder-image img {
+  max-width: 100%;
+  height: auto;
+}

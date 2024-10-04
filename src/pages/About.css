@@ -1,0 +1,353 @@
+/* Overall page layout */
+.about-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+/* Common styling for all sections */
+.about-page section {
+  margin-top: 5rem;
+}
+
+/* Section title styling */
+.about-page h2 {
+  font-size: 2rem;
+  position: relative;
+}
+
+
+/* About Me section */
+/* Layout for image and text */
+.about-content {
+  display: flex;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+/* Image styling */
+.about-image {
+  flex: 0 0 auto;
+  width: 450px; 
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text content styling */
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text h3 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+
+}
+
+/* List styling in About Me section */
+.about-text ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.about-text li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5em;
+  font-size: 1.125rem;
+}
+
+.about-text li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+}
+
+/* "View Resume" link styling */
+.view-resume {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: auto;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.view-resume .arrow {
+  margin-left: 0.3em;
+  font-size: 1em; /* Match the text size */
+  transition: transform 0.2s ease-in-out;
+}
+
+.view-resume:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+/* Clients section */
+.clients-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Intro text for Clients section */
+.clients-intro {
+  flex: 0 0 40%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Client list styling */
+.clients-list {
+  flex: 0 0 50%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clients-list li {
+  font-size: 3rem;
+  font-weight: regular;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* Approach section */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Individual approach item styling */
+.approach-item {
+  padding: 24px 24px 24px 0px;
+  border-radius: 8px;
+}
+
+.approach-item h3 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: medium;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em; 
+}
+
+.approach-item p {
+  color: #999999;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.approach-number {
+  color: #999999; 
+  font-weight: regular;
+  margin-right: 0.5rem;
+}
+
+.approach-item h3 em {
+  font-style: italic;
+  font-weight: medium; 
+}
+
+@media (max-width: 1024px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.clients-section {
+  margin: 12rem 0;
+}
+
+.clients-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.clients-section p {
+  font-size: 1.125rem;
+  color: #a0a0a0;
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.clients-list-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.clients-list {
+  display: inline-block;
+  animation: roll 30s linear infinite;
+}
+
+.client-name {
+  display: inline-block;
+  font-size: 3rem;
+  color: #ffffff;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  margin-right: 2rem;
+}
+
+.client-name:hover {
+  opacity: 1;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 1rem 16px; /* Adjust padding for mobile */
+  }
+
+  .about-page section {
+    margin-top: 3rem; /* Reduce top margin for sections */
+  }
+
+  .about-page h2 {
+    font-size: 1.75rem; /* Smaller font size for section titles */
+  }
+
+  /* About Me section */
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-image {
+    width: 100%; /* Full width image */
+    max-width: none; /* Remove max-width limitation */
+    margin: 0; /* Remove any margin */
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; /* Optional: remove border-radius for full-width effect */
+  }
+
+  .about-text h3 {
+    font-size: 1.75rem; /* Smaller font size */
+    margin-bottom: 0.75rem;
+  }
+
+  .about-text li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .view-resume {
+    font-size: 1.1rem; /* Slightly smaller font size */
+  }
+
+  /* Clients section */
+  .clients-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .clients-intro {
+    font-size: 1rem;
+  }
+
+  .clients-list li {
+    font-size: 2rem; /* Smaller font size for client names */
+  }
+
+  /* Approach section */
+  .approach-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1.5rem;
+  }
+
+  .approach-item {
+    padding: 16px 16px 16px 0px;
+  }
+
+  .approach-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .approach-item p {
+    font-size: 1rem;
+  }
+
+  /* Clients section with rolling animation */
+  .clients-section {
+    margin: 6rem 0; /* Reduce vertical margin */
+  }
+
+  .clients-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .clients-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .client-name {
+    font-size: 2rem; /* Smaller font size for client names */
+    margin-right: 1.5rem; /* Reduce spacing between names */
+  }
+}
+
+/* Additional optimization for very small screens */
+@media (max-width: 480px) {
+  .about-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .clients-list li,
+  .client-name {
+    font-size: 1.75rem;
+  }
+}
