@@ -6,7 +6,6 @@
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
-    /* Remove this line: overflow: hidden; */
   }
   
   .full-width-image {
@@ -34,7 +33,7 @@
 }
 
 .image-column {
-  flex: 0 0 48%; /* This makes each column take up slightly less than 50% to account for spacing */
+  flex: 0 0 48%; 
 }
 
 .image-column img {

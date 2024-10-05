@@ -1,72 +1,92 @@
 .case-study-selected-projects {
-  background-color: #000000;
+  background-color: #08090A;
   color: #FFFFFF;
-  padding: 60px 40px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  padding: 3.75rem 2.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  border-radius: 1.5rem; 
 }
 
 .selected-projects-content {
-  max-width: 1200px;
+  max-width: 75rem; 
   margin: 0 auto;
 }
 
 .case-study-selected-projects h2 {
   font-size: 3.5rem;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+  color: #FFFFFF;
 }
 
 .projects-subtitle {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 40px;
+  color: #A5A5A5;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  max-width: 100%;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .project-card {
+  background-color: #08090A;
 }
 
 .project-card img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px 12px 0 0;
+  border-radius: 0.75rem 0.75rem 0 0;
 }
 
 .project-card h3 {
   font-size: 1.2rem;
-  margin: 20px 20px 10px 0px;
+  margin: 1.25rem 1.25rem 0.625rem 0;
   font-weight: 500;
+  color: #FFFFFF;
 }
 
 .project-card p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #000000;
-  margin: 20px 20px 20px 0px;
+  color: #A5A5A5;
+  margin: 1.25rem 1.25rem 1.25rem 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) { 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) { 
   .case-study-selected-projects {
-    padding: 40px 20px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+    border-radius: 1rem;
   }
 
   .case-study-selected-projects h2 {
     font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.9
+  }
+
+  .projects-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    word-wrap: break-word;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

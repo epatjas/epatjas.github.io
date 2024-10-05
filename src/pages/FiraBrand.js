@@ -12,9 +12,15 @@ function FiraBrand() {
     window.scrollTo(0, 0);
   }, []);
 
+  const approachStyles = {
+    '--approach-background': '#F0EDFF',
+    '--step-background': '#E1DCFB',
+    '--step-number-color': '#2B1B4E'
+  };
+
   return (
     <div className="light-background">
-      <Header isLight={false} /> {/* Changed to false for dark variant */}
+      <Header isLight={false} /> 
       <div className="container">
         <CaseStudyHero 
           title="Fira Brand"
@@ -35,31 +41,37 @@ function FiraBrand() {
           ]}
         />
 
-        <CaseStudyApproach 
-          title="Becoming the bold innovator of the construction industry"
-          image={getImagePath('Fira 02.png')}
-          imageAlt="Fira Brand Approach"
-          steps={[
-            {
-              title: "Brand Strategy Workshop",
-              description: "We started by conducting workshops with key stakeholders to define Fira's core values, mission, and vision for the future."
-            },
-            {
-              title: "Visual Identity Design",
-              description: "Based on the brand strategy, we created a new visual identity that reflected Fira's bold and innovative spirit, including a new logo, color palette, and typography."
-            },
-            {
-              title: "Digital Experience Design",
-              description: "We redesigned Fira's digital touchpoints, including their website and internal platforms, to align with the new brand identity and improve user experience."
-            }
-          ]}
-        />
+        <div style={approachStyles}>
+          <CaseStudyApproach 
+            title="Becoming the bold innovator of the construction industry"
+            image={getImagePath('Fira 03.png')}
+            imageAlt="Fira Brand Approach"
+            steps={[
+              {
+                title: "Brand Strategy Workshop",
+                description: "We started by conducting workshops with key stakeholders to define Fira's core values, mission, and vision for the future."
+              },
+              {
+                title: "Visual Identity Design",
+                description: "Based on the brand strategy, we created a new visual identity that reflected Fira's bold and innovative spirit, including a new logo, color palette, and typography."
+              },
+              {
+                title: "Digital Experience Design",
+                description: "We redesigned Fira's new website to align with the new brand identity and improve user experience."
+              }
+            ]}
+          />
+        </div>
 
         <CaseStudySection 
           title="Challenge"
           description1="Fira was faced with an outdated brand identity and a website that lacked the sophistication and functionality required to serve its growing client base effectively. The company needed a brand renewal and a new digital platform that would reflect its modern approach to construction, highlight its broad range of services, and provide an improved user experience for clients and partners."
           image={getImagePath('Fira 04.png')}
         />
+
+        <div className="full-width-image">
+          <img src={getImagePath('Fira 02.png')} alt="Fira Brand Approach" />
+        </div>
 
         <CaseStudySection
           title="Solution"

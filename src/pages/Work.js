@@ -49,7 +49,8 @@ function Work() {
     <div className="workPage">
       <Header isLight={false} />
       <main className="work-content">
-        <h1 className="work-title">Selected Projects (20-24)</h1>
+        <h1 className="work-title">Selected Projects</h1>
+        <h2 className="work-subtitle">(20-24)</h2>
         <div className="project-grid">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} isLight={true} />

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { CaseStudyHero } from '../components/CaseStudyHero';
-import CaseStudySection from '../components/CaseStudySection';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { getImagePath } from '../utils/imageUtils';

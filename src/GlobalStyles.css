@@ -175,3 +175,19 @@ a:hover {
 }
 
 /* Add any other specific theme styles */
+
+body.light-theme,
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-theme,
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.light-background {
+  background-color: #ffffff;
+}

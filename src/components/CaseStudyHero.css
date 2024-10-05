@@ -1,20 +1,20 @@
 .case-study-header {
-  margin-bottom: 60px;
-  max-width: 1200px;
+  margin-bottom: 4rem;
+  max-width: 75rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 80px; 
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 5rem; 
   box-sizing: border-box;
 }
 
 .case-study-title-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   overflow: hidden;
 }
 
@@ -25,16 +25,17 @@
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: auto;
   text-align: left;
+  transform-origin: left top;
+  display: inline-block;
 }
-
 
 .case-study-intro {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; 
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .case-study-subtitle {
@@ -48,26 +49,26 @@
 .case-study-details {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   width: 40%;
 }
 
 .case-study-detail {
   display: flex;
-  align-items: flex-start; /* Changed back to flex-start */
+  align-items: flex-start;
 }
 
 .case-study-detail h3 {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin: 0;
-  width: 120px;
+  width: 7.5rem;
   flex-shrink: 0;
-  padding-right: 20px;
+  padding-right: 1.25rem;
   text-align: left;
-  padding-top: 4px; /* Align with the top of the pills */
+  padding-top: 0.25rem;
 }
 
 .case-study-detail p {
@@ -81,101 +82,101 @@
 }
 
 .case-study-detail.services p {
-  gap: 4px;
+  gap: 0.4rem;
 }
 
 .case-study-detail.client,
 .case-study-detail.year {
-  align-items: center; /* Center align for client and year */
+  align-items: center;
 }
 
 .pill {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 0.25rem 1rem;
   background-color: #fff;
   border: 1px solid #D4DAE6;
-  border-radius: 24px;
+  box-shadow: 0 1px 2px rgba(24, 24, 28, 0.04);
+  border-radius: 1.5rem;
   white-space: nowrap;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 .case-study-detail.services p::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+
 .case-study-detail.services p {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .case-study-header {
-    margin-bottom: 40px;
-    padding: 60px 16px 0; /* Adjust top padding and set left/right to 16px */
+    margin-bottom: 2.5rem;
+    padding: 3.75rem 1rem 0;
   }
 
   .case-study-title-container {
-    overflow: hidden; /* Keep the overflow hidden */
-    width: 100%; /* Ensure full width */
+    overflow: hidden;
+    width: 100%;
   }
 
   .case-study-title {
-    /* The font size will be handled by JavaScript */
-    white-space: nowrap; /* Keep it on one line */
+    font-size: 8rem; /* Starting point for mobile */
+    white-space: nowrap;
     line-height: 1;
-    transform-origin: left top; /* Scale from the top left corner */
+    transform-origin: left top;
+    display: inline-block;
+    width: auto;
   }
 
   .case-study-intro {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   
   .case-study-subtitle {
     font-size: 1.5rem;
     line-height: 1.4;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   
   .case-study-details {
     width: 100%;
-    gap: 15px;
+    gap: 1rem;
   }
 
   .case-study-detail {
-    flex-direction: row; /* Keep the layout horizontal */
+    flex-direction: row;
     align-items: flex-start;
-    gap: 15px; /* Add gap between label and content for mobile */
+    gap: 1rem;
   }
 
   .case-study-detail h3 {
-    width: 90px; /* Adjusted width for mobile */
+    width: 5.625rem;
     padding-right: 0;
     margin-bottom: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .case-study-detail p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
 
   .case-study-detail.services p {
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 0.25rem;
   }
 
-  .pill {
-    padding: 2px 8px;
-    font-size: 0.8rem;
-  }
+  
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
   .case-study-header {
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   .case-study-subtitle {
@@ -183,12 +184,9 @@
   }
 
   .case-study-detail h3 {
-    width: 80px; /* Further reduce width for very small screens */
+    width: 5rem;
     font-size: 0.75rem;
   }
 
-  .case-study-detail p,
-  .pill {
-    font-size: 0.85rem;
-  }
+  
 }

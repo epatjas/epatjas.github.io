@@ -3,19 +3,46 @@ import './CaseStudyHero.css';
 
 export function CaseStudyHero({ title, subtitle, services, client, year }) {
   const titleRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const resizeTitle = () => {
       const titleElement = titleRef.current;
-      if (!titleElement) return;
+      const containerElement = containerRef.current;
+      if (!titleElement || !containerElement) return;
 
-      const containerWidth = titleElement.offsetWidth;
-      let fontSize = 320; // Starting with a larger size (20rem assuming 16px base font size)
-      titleElement.style.fontSize = `${fontSize}px`;
+      const containerWidth = containerElement.offsetWidth;
+      const isMobile = window.innerWidth <= 768;
 
-      while (titleElement.scrollWidth > containerWidth && fontSize > 80) {
-        fontSize -= 2;
+      if (isMobile) {
+        let fontSize = 128;
         titleElement.style.fontSize = `${fontSize}px`;
+        titleElement.style.transform = 'none';
+
+        while (titleElement.offsetWidth > containerWidth && fontSize > 16) {
+          fontSize -= 1;
+          titleElement.style.fontSize = `${fontSize}px`;
+        }
+
+        if (titleElement.offsetWidth > containerWidth) {
+          const scale = containerWidth / titleElement.offsetWidth;
+          titleElement.style.transform = `scale(${scale})`;
+        }
+      } else {
+        let fontSize = 320;
+        titleElement.style.fontSize = `${fontSize}px`;
+        titleElement.style.transform = 'none';
+
+        while (titleElement.offsetWidth > containerWidth && fontSize > 80) {
+          fontSize -= 2;
+          titleElement.style.fontSize = `${fontSize}px`;
+        }
+
+        if (titleElement.offsetWidth > containerWidth) {
+          const scale = containerWidth / titleElement.offsetWidth;
+          titleElement.style.transform = `scale(${scale})`;
+          titleElement.style.transformOrigin = 'left top';
+        }
       }
     };
 
@@ -28,7 +55,7 @@ export function CaseStudyHero({ title, subtitle, services, client, year }) {
   return (
     <div className="case-study-hero">
       <div className="case-study-hero-content">
-        <div className="case-study-title-container">
+        <div className="case-study-title-container" ref={containerRef}>
           <h1 className="case-study-title" ref={titleRef}>{title}</h1>
         </div>
         <div className="case-study-intro">

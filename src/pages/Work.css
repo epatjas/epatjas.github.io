@@ -4,12 +4,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  ;
 }
 
 .work-content {
   flex: 1;
-  padding: 80px 40px;
+  padding: 5rem 0;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
@@ -18,16 +17,20 @@
 .work-title {
   font-size: 4rem;
   font-weight: normal;
-  margin-top: 40px; /* Add margin-top */
-  margin-bottom: 40px;
-  max-width: 600px;
+  margin-top: 2.5rem;
+  max-width: 37.5rem;
+}
+
+.work-subtitle {
+  font-size: 4rem;
+  font-weight: normal;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Add gap between grid items */
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 .workPage a {
@@ -38,43 +41,55 @@
   opacity: 0.7;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .work-content {
-    padding: 60px 16px; /* Adjust padding for mobile */
+    padding: 3.75rem 1rem;
   }
 
   .work-title {
-    font-size: 3rem; /* Reduce font size for mobile */
-    margin-top: 128px; /* Reduce margin-top for mobile */
-    margin-bottom: 30px;
+    font-size: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 0;
+  }
+
+  .work-subtitle {
+    margin-top: 0;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 16px; /* Reduce gap for mobile */
-    margin-top: 30px;
+    gap: 1rem;
+    margin-top: 2rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
   .work-content {
-    padding: 40px 16px; /* Further reduce padding for smaller devices */
+    padding: 2.5rem 1rem;
   }
 
   .work-title {
-    font-size: 3rem; /* Further reduce font size for smaller devices */
-    margin-top: 64px; /* Further reduce margin-top for smaller devices */
-    margin-bottom: 20px;
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+
+  .work-subtitle {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .project-grid {
-    gap: 12px; /* Further reduce gap for smaller devices */
-    margin-top: 20px;
+    gap: 0.75rem;
+    margin-top: 1rem;
   }
 }

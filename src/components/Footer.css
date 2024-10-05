@@ -93,6 +93,10 @@
     flex-direction: column;
     gap: 2rem;
   }
+  .callToAction {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
 
   .quote, .callToAction {
     max-width: 100%;
@@ -123,6 +127,7 @@
   }
 
   .callToAction p, .footerNav a, .copyright {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 }

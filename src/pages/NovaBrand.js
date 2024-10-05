@@ -3,7 +3,6 @@ import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import CaseStudySection from '../components/CaseStudySection';
-// Remove this line: import Header from '../components/Header';
 import './NovaBrand.css'; 
 import { getImagePath } from '../utils/imageUtils';
 
@@ -14,7 +13,6 @@ function NovaBrand() {
 
   return (
     <div className="nova-brand-page light-background">
-      {/* Remove this line: <Header isLight={true} /> */}
       <div className="container">
         <CaseStudyHero 
           title="Nova Brand"
@@ -58,7 +56,6 @@ function NovaBrand() {
           <img src={getImagePath('Nova 08.png')} alt="Nova Brand Overview" />
         </div>
 
-
         <CaseStudyApproach 
           title="A better future for every learner."
           image={getImagePath('Nova 09.png')}
@@ -78,18 +75,18 @@ function NovaBrand() {
           ]}
         />
 
-<CaseStudySection 
-  title="Igniting a learning revolution"
-  description1="The solution delivered was a complete brand package for Nova, encompassing both strategic and visual elements:"
-  bulletPoints={[
-    "Brand Strategy: We provided clearly defined brand values, a compelling mission statement, and an inspiring vision that aligned with Otava's new service-centric focus.",
-    "Visual Identity: The new visual identity included a distinctive logo, a carefully curated color palette, typography that balanced readability with modernity, guidelines for photographic style, and an intuitive iconography system.",
-    "Tone of Voice: We established guidelines for Nova's communication style, ensuring consistency in messaging across all platforms and touchpoints.",
-    "Design System: A comprehensive design system was created and documented, serving as a single source of truth for implementing the Nova brand across all Otava products. This system included detailed specifications for UI components, page templates, and interaction patterns."
-  ]}
-  image={getImagePath('Nova 11.png')}
-/>
-    <div className="full-width-image">
+        <CaseStudySection 
+          title="Igniting a learning revolution"
+          description1="The solution delivered was a complete brand package for Nova, encompassing both strategic and visual elements:"
+          bulletPoints={[
+            "Brand Strategy: We provided clearly defined brand values, a compelling mission statement, and an inspiring vision that aligned with Otava's new service-centric focus.",
+            "Visual Identity: The new visual identity included a distinctive logo, a carefully curated color palette, typography that balanced readability with modernity, guidelines for photographic style, and an intuitive iconography system.",
+            "Tone of Voice: We established guidelines for Nova's communication style, ensuring consistency in messaging across all platforms and touchpoints.",
+            "Design System: A comprehensive design system was created and documented, serving as a single source of truth for implementing the Nova brand across all Otava products. This system included detailed specifications for UI components, page templates, and interaction patterns."
+          ]}
+          image={getImagePath('Nova 11.png')}
+        />
+        <div className="full-width-image">
           <img src={getImagePath('Nova 12.png')} alt="Nova Brand Overview" />
         </div>
 
@@ -100,7 +97,6 @@ function NovaBrand() {
         <div className="full-width-image">
           <img src={getImagePath('Nova 14.png')} alt="Nova Brand Overview" />
         </div>
-
 
         <CaseStudyParagraph 
           title="Bright horizons"

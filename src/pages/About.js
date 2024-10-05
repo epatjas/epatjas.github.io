@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Footer from '../components/Footer'; 
+import { useLocation } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import './About.css';

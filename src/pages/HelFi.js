@@ -4,12 +4,12 @@ import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import { CaseStudyTestimonial } from '../components/CaseStudyTestimonial';
 import CaseStudyProjects from '../components/CaseStudyProjects';
-import './Hel_fi.css'; 
-import Header from '../components/Header';
+import './HelFi.css'; 
+// Remove this line: import Header from '../components/Header';
 import CaseStudySection from '../components/CaseStudySection';
 import { getImagePath } from '../utils/imageUtils';
 
-function Hel_fi() {
+function HelFi() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,7 +38,7 @@ function Hel_fi() {
 
   return (
     <div className="light-background">
-      <Header isLight={false} />
+      {/* Remove this line: <Header isLight={true} /> */}
       <div className="container">
         {/* Existing content wrapped in the container */}
         <CaseStudyHero 
@@ -107,4 +107,4 @@ function Hel_fi() {
   );
 }
 
-export default Hel_fi;
+export default HelFi;
