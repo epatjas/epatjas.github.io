@@ -24,15 +24,16 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const isLightTheme = ['/work', '/work/NovaBrand', '/work/Hel_fi', '/work/FiraBrand', '/work/Nova_ai', '/work/nova_platform'].includes(location.pathname);
+  const isLightTheme = ['/work', '/work/NovaBrand', '/work/Hel_fi', '/work/FiraBrand', '/work/Nova_ai', '/work/nova_platform', '/work/CodingCompany'].includes(location.pathname);
+  const isLightFooter = ['/work'].includes(location.pathname);
 
   React.useEffect(() => {
     document.body.className = isLightTheme ? 'light-theme' : 'dark-theme';
   }, [isLightTheme]);
 
   return (
-    <div className={`app-wrapper ${isLightTheme ? 'light-theme' : 'dark-theme'}`} style={{minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
-      <Header currentPath={location.pathname} isLight={!isLightTheme} />
+    <div className="app-wrapper" style={{minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
+      <Header currentPath={location.pathname} isLight={isLightTheme} />
       <main style={{flex: 1}}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -46,7 +47,7 @@ function AppContent() {
           <Route path="/work/CodingCompany" element={<CodingCompany />} />
         </Routes>
       </main>
-      <Footer currentPath={location.pathname} isLight={!isLightTheme} />
+      <Footer currentPath={location.pathname} isLight={isLightFooter} />
       <SocialDock />
     </div>
   );

@@ -1,7 +1,9 @@
 :root {
   /* Color tokens */
   --color-background-dark: hsl(210, 11%, 4%);
+  --color-background-light: hsl(0, 0%, 100%);
   --color-text-light: hsl(235, 62%, 96%);
+  --color-text-dark: hsl(210, 11%, 4%);
   --color-text-secondary: hsl(0, 0%, 60%);
   --font-main: 'Inter', sans-serif;
   --max-width: 1400px; 
@@ -28,9 +30,8 @@ html, body, #root {
 
 body {
   font-family: var(--font-main);
-  background-color: var(--color-background-light);
-  color: var(--color-text-dark);
   line-height: 1.2;
+  min-height: 100vh;
 }
 
 /* Reset headings */
@@ -52,57 +53,34 @@ a {
   color: inherit;
 }
 
-/* Set dark background for the entire page */
-html, body, #root {
-  margin: 0;
-  padding: 0;
+/* Theme styles */
+body, #root, .app-wrapper {
   min-height: 100vh;
 }
 
-body {
+body.light-theme,
+.light-theme {
   background-color: var(--color-background-light);
   color: var(--color-text-dark);
 }
 
-body.dark-theme {
-  background-color: var(--color-background-dark, #000000);
-  color: var(--color-text-light, #ffffff);
-}
-
-body.light-theme {
-  background-color: var(--color-background-light, #ffffff);
-  color: var(--color-text-dark, #000000);
-}
-
-.app-wrapper {
-  min-height: 100vh;
-}
-
-/* Ensure the root div takes up full height */
-#root {
-  min-height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-regular);
-}
-
-a {
-  text-decoration: none;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-a:hover {
-  opacity: 0.7;
-  text-decoration: none; 
-}
-
-/* Dark background for Home and About pages */
-.home-page {
+body.dark-theme,
+.dark-theme {
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
-  min-height: 100vh;
+}
+
+/* Ensure links are visible in both themes */
+.light-theme a {
+  color: var(--color-text-dark);
+}
+
+.dark-theme a {
+  color: var(--color-text-light);
+}
+
+/* Home page specific styles */
+.home-page {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -111,7 +89,20 @@ a:hover {
 
 .home-page > * {
   width: 100%;
-  max-width: var(--max-width, 1400px);
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}
+
+.home-page > section {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.home-page > section > * {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -120,13 +111,6 @@ a:hover {
   width: 100%;
   max-width: none;
   padding: 0;
-}
-
-.home-page > section > * {
-  max-width: var(--max-width, 1400px);
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
 
 /* Ensure links in dark background are visible */
@@ -166,12 +150,12 @@ a:hover {
 
 .dark-theme .header {
   /* Styles for light header on dark theme */
-  color: var(--color-text-light, #ffffff);
+  color: var(--color-text-light);
 }
 
 .light-theme .header {
   /* Styles for dark header on light theme */
-  color: var(--color-text-dark, #000000);
+  color: var(--color-text-dark);
 }
 
 /* Add any other specific theme styles */
@@ -184,7 +168,7 @@ body.light-theme,
 
 body.dark-theme,
 .dark-theme {
-  background-color: #000000;
+  background-color: var(--color-background-dark);
   color: #ffffff;
 }
 
