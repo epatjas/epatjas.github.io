@@ -1,7 +1,5 @@
 Hey there! 👋 I'm Elina.
 
-TL;DR: Product Designer who codes (or at least tries to). Pixel perfectionist. Techno lover.
-
 I'm a product designer by trade, but I've got a not-so-secret love affair with code. Yeah, I'm one of those designers who can't resist tinkering with React components when I should be in Figma.
 
 ## What's my deal?
@@ -9,7 +7,6 @@ I'm a product designer by trade, but I've got a not-so-secret love affair with c
 - 🎨 Seasoned product designer (been doing this for 15+ years now)
 - 💻 Self-taught wanna-be front-end developer (because why not?)
 - 🤓 UX/UI nerd with a penchant for clean, intuitive designs
-- 🛠️ Builder of my own portfolio site (it's a React app, of course)
 
 ##Current design stack
 
