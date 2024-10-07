@@ -43,8 +43,8 @@ function Home() {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>I'm currently working as a <Link to="/about#faq">Fractional Design Partner</Link>. I bring product strategy and hands-on UX/UI design to companies ready to scale. I blend big-picture thinking with practical execution, bridging the gap between concept and shipped product efficiently.</p>
-              <p>My expertise spans creative and technical realms, enabling me to align teams and shape clear product visions. I adapt to your company's needs, whether you're a startup or scaling up, delivering high-impact results without the overhead of a full-time hire.</p>
+              <p>I'm currently working as a <Link to="/about#faq">Independent Design Partner</Link>, offering product strategy and UX/UI design to companies looking to grow. I combine strategic planning with hands-on design work, helping turn ideas into finished products efficiently.</p>
+              <p>My background in both creative and technical areas allows me to coordinate teams and develop clear product plans. I adjust my approach based on each company's needs, whether they're just starting out or expanding. This flexible arrangement lets companies benefit from experienced design leadership without the commitment of a full-time hire.</p>
             </div>
             <div className="skills">
               <h3>Cababilities</h3>

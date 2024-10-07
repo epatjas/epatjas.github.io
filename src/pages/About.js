@@ -15,14 +15,13 @@ const About = () => {
     }
   }, [location]);
 
-  // Remove the experiences array as it's no longer needed
 
   const approachItems = [
     { title: "I work fast, I mean like <em>really</em> fast", description: "Quick iteration allows me to zoom through explorations until I arrive at something that feels just right." },
     { title: "Master at taming the chaos", description: "I have the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems." },
     { title: "I don't ship junk. Ever.", description: "I believe meticulous care and a design-centric approach are crucial for creating exceptional user experiences." },
     { title: "I think in systems", description: "I develop reusable components for both small features and entire design systems, ensuring consistency and scalability." },
-    { title: "I work with little to no direction", description: "I thrive in ambiguity, turning vague concepts into tangible solutions without needing constant guidance." },
+    { title: "I speak also dev", description: "I'm comfortable getting my hands dirty with code—pushing commits to repos and collaborating directly with engineers on implementation." },
     { title: "Show and tell", description: "I regularly share work-in-progress, keeping stakeholders informed and involved throughout the design journey." }
   ];
 
@@ -55,12 +54,12 @@ const About = () => {
 
   const faqQuestions = [
     {
-      question: "What is a Fractional Design Partner?",
-      answer: "A Fractional Design Partner is an innovative collaboration where companies engage with seasoned designers on a flexible basis to elevate their product vision. As your part-time design partner, I offer both strategic guidance and hands-on expertise, helping organizations bring their ideas to life efficiently. This model provides access to senior-level design talent without the commitment of a full-time hire, making it ideal for startups and growing companies looking to maximize their design impact."
+      question: "What is an Independent Design Partner?",
+      answer: "An Independent Design Partner is an innovative collaboration model where companies engage with seasoned designers on a flexible basis to elevate their product vision. As your design partner, I offer both strategic guidance and hands-on expertise, helping organizations bring their ideas to life efficiently. This model provides access to senior-level design talent without the commitment of a full-time hire, making it ideal for startups and growing companies looking to maximize their design impact."
     },
     {
-      question: "What are the benefits of a Fractional Design Partner?",
-      answer: "Hiring a full-time senior designer can be challenging and risky for startups. As your part-time design partner, I offer a flexible, cost-effective alternative. You'll get senior-level expertise to quickly validate ideas and establish scalable design processes, without the long-term commitment. Drawing from my diverse industry experience, I'll help bring your ideas to life efficiently while guiding you in building your own design capabilities. It's a low-risk way to give your company a strong design edge and maximize impact."
+      question: "What are the benefits of an Independent Design Partner?",
+      answer: "Hiring a full-time senior designer can be challenging and risky for startups. As a design partner, I offer a flexible, cost-effective alternative. You'll get senior-level expertise to quickly validate ideas and establish scalable design processes, without the long-term commitment. Drawing from my diverse industry experience, I'll help bring your ideas to life efficiently while guiding you in building your own design capabilities. It's a low-risk way to give your company a strong design edge and maximize impact."
     },
     {
       question: "What is your pricing structure?",
