@@ -7,7 +7,7 @@ I'm a product designer by trade, but I've got a not-so-secret love affair with c
 ## What's my deal?
 
 - 🎨 Seasoned product designer (been doing this for 15+ years now)
-- 💻 Self-taught front-end developer (because why not?)
+- 💻 Self-taught wanna-be front-end developer (because why not?)
 - 🤓 UX/UI nerd with a penchant for clean, intuitive designs
 - 🛠️ Builder of my own portfolio site (it's a React app, of course)
 
