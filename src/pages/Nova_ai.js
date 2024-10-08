@@ -4,6 +4,7 @@ import CaseStudySection from '../components/CaseStudySection';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { getImagePath } from '../utils/imageUtils';
+import Header from '../components/Header'; // Add this import
 import './Nova_ai.css';
 
 const NovaAI = () => {
@@ -13,6 +14,7 @@ const NovaAI = () => {
 
   return (
     <div className="case-study-nova-ai">
+      <Header isLight={false} /> {/* Add this line */}
       <div className="container">
         <CaseStudyHero
           title="Nova AI"

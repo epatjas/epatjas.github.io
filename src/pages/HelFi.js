@@ -5,7 +5,7 @@ import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import { CaseStudyTestimonial } from '../components/CaseStudyTestimonial';
 import CaseStudyProjects from '../components/CaseStudyProjects';
 import './HelFi.css'; 
-// Remove this line: import Header from '../components/Header';
+import Header from '../components/Header'; 
 import CaseStudySection from '../components/CaseStudySection';
 import { getImagePath } from '../utils/imageUtils';
 
@@ -40,6 +40,7 @@ function HelFi() {
     <div className="light-background">
       {/* Remove this line: <Header isLight={true} /> */}
       <div className="container">
+      <Header isLight={false} /> {/* Add this line */}
         {/* Existing content wrapped in the container */}
         <CaseStudyHero 
           title="New Hel.fi"

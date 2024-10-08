@@ -3,6 +3,7 @@ import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { getImagePath } from '../utils/imageUtils';
+import Header from '../components/Header'; // Add this import
 import { CaseStudyVideo } from '../components/CaseStudyVideo';
 import { CaseStudySteps } from '../components/CaseStudySteps';
 import './nova_platform.css';
@@ -20,13 +21,14 @@ const NovaPlatform = () => {
 
   return (
     <div className="case-study-nova-platform">
+      <Header isLight={false} /> {/* Add this line */}
       <div className="container">
         <CaseStudyHero
           title="Nova Platform"
           subtitle="I led the design vision of the new online learning platform with a focus on inspiring learning experiences."
           services={['Product Design', 'Design Leadership']}
           client="Nova"
-          year="2023"
+          year="202-202"
         />
 
         <div className="full-width-image">

@@ -3,6 +3,7 @@ import { CaseStudyHero } from '../components/CaseStudyHero';
 import { CaseStudyParagraph } from '../components/CaseStudyParagraph';
 import { CaseStudyApproach } from '../components/CaseStudyApproach';
 import CaseStudySection from '../components/CaseStudySection';
+import Header from '../components/Header'; // Add this import
 import './NovaBrand.css'; 
 import { getImagePath } from '../utils/imageUtils';
 
@@ -13,6 +14,7 @@ function NovaBrand() {
 
   return (
     <div className="nova-brand-page light-background">
+      <Header isLight={false} /> {/* Add this line */}
       <div className="container">
         <CaseStudyHero 
           title="Nova Brand"
@@ -28,8 +30,8 @@ function NovaBrand() {
 
         <CaseStudySection 
           title="Where education meets innovation"
-          description1="Otava Learning, a major Finnish publishing company specializing in educational materials, found itself at a crossroads in the digital age. As the company shifted its strategy towards service centricity, moving away from marketing individual products, it became apparent that their digital services were disconnected and lacked a unified user experience."
-          description2="This fragmentation was hindering Otava's ability to provide a cohesive, user-friendly platform for online learning."
+          description1="A major Finnish publishing company specializing in educational materials found itself facing new challenges in the digital age. As the company adapted to changing times, it became apparent that their digital offerings needed improvement to better serve modern learners."
+          description2="The company recognized the need to create a more integrated and user-friendly approach to online education."
           image={getImagePath('Nova 02.png')} 
         />
 
@@ -104,7 +106,7 @@ function NovaBrand() {
             "While specific metrics would provide a more concrete measure of success, the initial outcomes of the Nova brand launch were promising. The Nova online learning platform was launched with a cohesive brand identity, marking a significant milestone in Otava Learning's digital transformation. This successful integration was immediately apparent in the improved user experience, with early feedback indicating a noticeable enhancement in navigation and overall interaction across Otava's digital services.",
             "The implementation of the shared design system yielded good results in brand consistency. Across Otava's product line, the new unified digital presence reinforced the company's commitment to cohesive, user-centric design. This consistency didn't go unnoticed - both internal stakeholders and end-users provided positive feedback on the new brand identity, highlighting its modern appeal and improved usability.",
             "Perhaps one of the most significant outcomes was the boost in operational efficiency. The comprehensive design system streamlined design and development processes, leading to more efficient creation of new materials and updates to existing products. This not only improved the speed of product development but also ensured that all new offerings maintained the high standard of quality and consistency set by the Nova brand.",
-            "These initial results suggest that the Nova brand successfully supported Otava Learning's strategic shift towards service centricity and digital innovation in the educational publishing sector, setting a strong foundation for future growth and development."
+            "These initial results suggest that the company's new initiatives successfully supported its goals of embracing digital innovation in the educational publishing sector, setting a strong foundation for future growth and development."
           ]}
           ctaButton={{
             text: "Visit Nova",
