@@ -4,6 +4,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import './About.css';
 import { getImagePath } from '../utils/imageUtils';
+import { ArrowUpRight } from 'lucide-react';
 
 const About = () => {
   const location = useLocation();
@@ -27,16 +28,22 @@ const About = () => {
 
   const testimonials = [
     {
-      quote: "I cannot recommend Elina enough. Truly world-class in every sense of the word. From helping to visualize an ambitious product story & vision, to playing an active role in bringing on senior full-time talent, and everything in between - Elina can seemingly do it all. Our client's product, team, culture, and customers are in a stronger position thanks to our time together.",
+      quote: "Lightning-fast and visually talented UX designer with deep desire to truly understand user needs equals Elina. I had the privilege of working together with her on a new educational platform for primary-school pupils - her ability to grasp complicated matters and turn them into easy to use solutions just blew my mind. Her commitment to accessibility, combined with the use of clear design system patterns, not only improved the user experience but also significantly sped up my development.",
       author: "Rami Ertimo",
       position: "Front End Architect, Asteroid",
       avatar: getImagePath('rami.png')
     },
     {
-      quote: "Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she guided the UX team with admirable serenity. In a short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organisation!",
-      author: "Kristiina Ahonen",
-      position: "Senior Content Designer, Kuudes",
-      avatar: getImagePath('krisse.png')
+      quote: "Elina played a key role in the success of a highly complex project, enhancing our design processes and developing a crucial design system for the organization. She consistently tackled large initiatives with creativity, strategic thinking, and precision. Her ability to manage intricate systems while driving the team's design maturity made a lasting impact. I learned a great deal from working with her, and her contributions were invaluable.",
+      author: "Anna Hallikainen",
+      position: "Development Director, Otava Learning",
+      avatar: getImagePath('anna.png')
+    },
+    {
+      quote: "As a designer, Elina personifies a rare combination of business understanding, technical skills, and good old determination to thrive in the most demanding of circumstances. You can throw her from a high altitude into unknown territories and not only will she land on her feet, she lands already running. Before you know it, Elina makes sure that you have a map, a base camp and – most importantly – a reliable partner to travel with wherever you want to go.",
+      author: "Mikko Tirronen",
+      position: "Head of Infra, Otava Learning",
+      avatar: getImagePath('mikko.png')
     },
     {
       quote: "Elina has created the new visual and UX concept for city of Helsinki's main website and helped us to build our brand experience in the digital world. Elina has also been instrumental in creating our UX/UI design ways of working and training our UX/UI team and scaling our models across the organisation. Elina is incredible with documentation and building collaboration with software development. She has also contributed a great deal to our team's wellbeing and positive atmosphere.",
@@ -45,10 +52,10 @@ const About = () => {
       avatar: getImagePath('anni.png')
     },
     {
-      quote: "Elina is a master at taming the chaos. She has the rare ability to jump into the early stages of open-ended projects and rapidly develop structure and systems. She is proactive, works with little to no direction — and she's also very fast!",
-      author: "Anna Hallikainen",
-      position: "Development Director, Otava Learning",
-      avatar: getImagePath('anna.png')
+      quote: "Under Elina's leadership, the UX level of this project has been raised to a very high level. Elina's handprint is always extremely high quality and well thought out, and she guided the UX team with admirable serenity. In a short time, the extremely skilled Elina became quite a strong authority to raise the maturity level of UX for the whole organisation!",
+      author: "Kristiina Ahonen",
+      position: "Senior Content Designer, Kuudes",
+      avatar: getImagePath('krisse.png')
     }
   ];
 
@@ -81,7 +88,6 @@ const About = () => {
     "Kone",
     "Froneri Finland",
     "Metso",
-    // Add more clients as needed
   ];
 
   return (
@@ -101,9 +107,11 @@ const About = () => {
               <li>Lead end-to-end design projects, collaborating closely with engineering teams for swift iteration and high-quality implementation</li>
               <li>Come up with features and improvements that ship quickly and with high-quality</li>
               <li>Build and nurture a successful design team within your company</li>
-              <li>Establish design-centric processes that promote attention to detail and quality</li>
+              <li>Establish design-centric processes that promote attention to detail</li>
             </ul>
-            <a href="https://www.linkedin.com/in/elinapatjas/" className="view-resume">View resume →</a>
+            <a href="https://www.linkedin.com/in/elinapatjas/" className="view-resume">
+              View resume <ArrowUpRight className="arrow-icon" size={20} />
+            </a>
           </div>
         </div>
       </section>

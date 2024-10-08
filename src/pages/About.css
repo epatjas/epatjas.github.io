@@ -80,18 +80,21 @@
   align-items: center;
   color: #ffffff;
   text-decoration: none;
-  margin-top: auto;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.125rem;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+  background-color: transparent;
 }
 
-.view-resume .arrow {
-  margin-left: 0.3em;
-  font-size: 1em; /* Match the text size */
+
+.view-resume .arrow-icon {
+  margin-left: 10px;
   transition: transform 0.2s ease-in-out;
 }
 
-.view-resume:hover .arrow {
+.view-resume:hover .arrow-icon {
   transform: translate(2px, -2px);
 }
 
