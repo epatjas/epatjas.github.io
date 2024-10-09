@@ -1,8 +1,9 @@
 /* Overall page layout */
 .about-page {
-  max-width: 1400px;
+  max-width: var(--max-width);
   margin: 0 auto;
   color: #ffffff;
+  padding: 0 20px; /* Default padding */
 }
 
 /* Common styling for all sections */
@@ -354,5 +355,19 @@
   .clients-list li,
   .client-name {
     font-size: 1.75rem;
+  }
+}
+
+/* New media queries for padding adjustments */
+@media (min-width: 768px) {
+  .about-page {
+    padding: 0 40px; /* Increase padding for larger screens */
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-page {
+    padding: 0 20px; /* Maintain 20px padding at 1400px and above */
+    max-width: calc(var(--max-width) - 40px); /* Adjust max-width to account for padding */
   }
 }

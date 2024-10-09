@@ -1,7 +1,7 @@
 .home-page {
     max-width: var(--max-width);
     margin: 0 auto;
-    
+    padding: 0 20px; /* Default padding */
 }
 
 .hero {
@@ -227,6 +227,19 @@ h2 {
 
     .project-grid {
         grid-template-columns: 1fr; /* Single column for mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    .home-page {
+        padding: 0 40px; /* Increase padding for larger screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    .home-page {
+        padding: 0 20px; /* Maintain 20px padding at 1400px and above */
+        max-width: calc(var(--max-width) - 40px); /* Adjust max-width to account for padding */
     }
 }
 
