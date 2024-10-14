@@ -20,7 +20,7 @@ const NovaAI = () => {
           title="Nova AI"
           subtitle="Leveraging LLMs to automate exercise generation for adaptive learning"
           services={['Concepting', 'Product Design']}
-          client="Nova"
+          client="Otava Learning"
           year="2024"
         />
 
@@ -31,7 +31,7 @@ const NovaAI = () => {
         <CaseStudyParagraph
           title="The challenge"
           content={[
-            "As the Principal Product Designer at Nova Learning, my primary objective was to create a tool that would help to streamline our team's tasks and the innovative solutions we developed through a proof of concept that creates adaptive learning exercises. The goal was to leverage large language models (LLMs) to automate the generation of exercises for differentiated learning materials across all grade levels and subject areas."
+            "As the Principal Product Designer at Otava Learning, my primary objective was to create a tool that would help to streamline our team's tasks and the innovative solutions we developed through a proof of concept that creates adaptive learning exercises. The goal was to leverage large language models (LLMs) to automate the generation of exercises for differentiated learning materials across all grade levels and subject areas."
           ]}
         />
 
