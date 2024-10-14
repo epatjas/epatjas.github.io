@@ -31,7 +31,7 @@ const NovaAI = () => {
         <CaseStudyParagraph
           title="The challenge"
           content={[
-            "As the Principal Product Designer at Otava Learning, my primary objective was to create a tool that would help to streamline our team's tasks and the innovative solutions we developed through a proof of concept that creates adaptive learning exercises. The goal was to leverage large language models (LLMs) to automate the generation of exercises for differentiated learning materials across all grade levels and subject areas."
+            "As the Principal Product Designer at Otava Learning, my primary objective was to design a tool that would help to streamline our team's tasks and the innovative solutions we developed through a proof of concept that creates adaptive learning exercises. The goal was to leverage large language models (LLMs) to automate the generation of exercises for differentiated learning materials across all grade levels and subject areas."
           ]}
         />
 
@@ -99,7 +99,7 @@ const NovaAI = () => {
           content={[
             "While this AI-powered exercise generation tool is not yet implemented in the actual platform, the proof of concept has proven to be highly promising. As we move forward, we plan to refine the tool further and explore integration possibilities into our learning management systems.",
             "Next steps include exploring ways to further enhance the exercise generation process, such as incorporating customized feedback and progress tracking features. We also aim to expand the tool's capabilities to cover more subject areas, grade levels, and curriculum standards while ensuring the highest quality of AI-generated learning materials possible.",
-            "Through this proof of concept project, Nova Learning has demonstrated the potential for AI to revolutionize the way we approach adaptive learning. We plan to keep pushing the boundaries of what's possible, and I'm excited to see the lasting impact this innovative learning experience will have on students around the world over the coming years."
+            "Through this proof of concept project, Otava Learning has demonstrated the potential for AI to revolutionize the way we approach adaptive learning. We plan to keep pushing the boundaries of what's possible, and I'm excited to see the lasting impact this innovative learning experience will have on students around the world over the coming years."
           ]}
         />
       </div>
