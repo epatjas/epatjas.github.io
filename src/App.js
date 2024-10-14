@@ -13,10 +13,12 @@ import NovaAI from './pages/Nova_ai';
 import NovaPlatform from './pages/nova_platform'; 
 import CodingCompany from './pages/CodingCompany';
 import './GlobalStyles.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );

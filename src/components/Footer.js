@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css'; 
 
 function Footer({ currentPath, isLight }) {
@@ -23,9 +24,9 @@ function Footer({ currentPath, isLight }) {
       <div className="footerBottom">
         <nav className="footerNav">
           <ul>
-            <li><a href="/">Overview</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/about">About</a></li>
+            <li><Link to="/">Overview</Link></li>
+            <li><Link to="/work">Work</Link></li>
+            <li><Link to="/about">About</Link></li>
           </ul>
         </nav>
         <p className="copyright">Design & Development by Elina Patjas. Copyright © 2024.</p>
